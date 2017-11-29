@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Robotics and Internet of Things IoT Unit</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Responsive Website Template">
+	<meta name="author" content="The Develovers">
+	<!-- CORE CSS -->
+	<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/elegant-icons.css" rel="stylesheet" type="text/css">
+	<!-- SLIDER REVOLUTION CSS -->
+	<link href="assets/js/plugins/revolution/css/settings.css" rel="stylesheet" type="text/css">
+	<link href="assets/js/plugins/revolution/css/layers.css" rel="stylesheet" type="text/css">
+	<link href="assets/js/plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css">
+	<!-- THEME CSS -->
+	<link href="assets/css/main.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/my-custom-styles.css" rel="stylesheet" type="text/css">
+	
+	<!-- GOOGLE FONTS -->
+	<link href='https://fonts.googleapis.com/css?family=Raleway:700,400,400italic,500' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,300,300italic' rel='stylesheet' type='text/css'>
+	<!-- FAVICONS -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/bravana144.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/bravana114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/bravana72.png">
+	<link rel="apple-touch-icon-precomposed" href="assets/ico/bravana57.png">
+	<link rel="shortcut icon" href="assets/ico/favicon.ico">
+</head>
+
+<body>
+	<!-- WRAPPER -->
+	<div id="wrapper">
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-default navbar-fixed-top navbar-no-background navbar-light-font ignore-paddingtop">
+			<!-- TOP BAR -->
+			<!-- 
+			<div class="nav-topbar clearfix">
+				<div class="container">
+					<div class="left">
+						<ul class="list-inline social-icons social-icons-small social-icons-fullrounded">
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-rss"></i></a></li>
+							<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+						</ul>
+					</div>
+					<div class="right">
+						<form class="navbar-form navbar-left search-form" method="post" role="search">
+							<div class="input-group input-group-sm">
+								<input type="text" class="form-control">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+								</span>
+							</div>
+						</form>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#">SUPPORT</a></li>
+							<li><a href="#">HELP</a></li>
+							<li><a href="#">SIGN IN</a></li>
+							<li><a href="#" class="as-button"><span class="btn btn-primary">SIGN UP</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			-->			
+			<!-- END TOP BAR -->
+			<div class="container">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse">
+					<span class="sr-only">Toggle Navigation</span>
+					<i class="fa fa-bars"></i>
+				</button>
+				<a href="index.html" class="navbar-brand">
+					<img src="assets/img/logo/logo_psu.jpg" alt="Bravana Logo">
+				</a>
+				<ul class="nav navbar-nav secondary-navbar-nav">
+					<li class="dropdown dropdown-cart">
+						<a href="#" class="as-icon disabled dropdown-toggle" data-toggle="dropdown"><i class="icon icon_cart_alt"></i> <span class="cart-count">2</span></a>
+						<!-- 
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li>
+								<div class="shopping-cart-widget">
+									<strong>You have <span class="text-primary">2 items</span> in your cart</strong>
+									<ul class="list-unstyled">
+										<li>
+											<div class="cart-item clearfix">
+												<a href="#"><img src="assets/img/shop/products/cart-widget-img1.jpg" class="img-responsive" alt="Product Thumbnail"></a>
+												<div class="info">
+													<a href="#"><strong class="product-title">Product 1</strong></a>
+													<span class="product-qty-price text-muted-2x">1 x $135</span>
+												</div>
+												<button type="button" class="btn btn-link btn-close"><i class="fa fa-close"></i></button>
+											</div>
+										</li>
+										<li>
+											<div class="cart-item clearfix">
+												<a href="#"><img src="assets/img/shop/products/cart-widget-img2.jpg" alt="Product Thumbnail"></a>
+												<div class="info">
+													<a href="#"><strong class="product-title">Product 2</strong></a>
+													<span class="product-qty-price text-muted-2x">1 x $80</span>
+												</div>
+												<button type="button" class="btn btn-link btn-close"><i class="fa fa-close"></i></button>
+											</div>
+										</li>
+									</ul>
+									<div class="cart-footer">
+										<strong class="total">Total: $215</strong>
+										<a href="shop-cart-checkout.html" class="btn btn-primary btn-checkout btn-fullrounded">CHECKOUT</a>
+										<div class="clearfix"></div>
+										<p class="continue-shopping"><a href="index-shop.html">Continue shopping</a></p>
+									</div>
+								</div>
+							</li>
+						</ul>
+						-->
+					</li>
+				</ul>
+				<div id="main-nav-collapse" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav main-navbar-nav">
+						<li>
+							<a href="#">ABOUT <i ></i></a>					
+						</li>
+						<li class="dropdown ">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">RESEARCH <i class="fa fa-angle-down"></i></a>
+							<ul class="dropdown-menu" role="menu">
+								<li class="dropdown ">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">AREA 1</a>								
+								</li>
+								<li class="dropdown ">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">AREA 2 </a>									
+								</li>
+								<li class="dropdown ">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">AREA 3  </a>						
+								</li>
+								
+							
+							</ul>
+						</li>
+						<li class="dropdown ">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">PEOPLE <i class="fa fa-angle-down"></i></a>
+							<ul class="dropdown-menu" role="menu">
+								<li class="dropdown ">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Faculity</a>								
+								</li>
+								<li class="dropdown ">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Postdoctoral Fellows </a>									
+								</li>
+								<li class="dropdown ">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Research Scientists </a>						
+								</li>
+							<li class="dropdown ">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Research Staff </a>						
+								</li>
+								<li class="dropdown ">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">PhD Students </a>						
+								</li>
+								<li class="dropdown ">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Master Students</a>						
+								</li>
+								<li class="dropdown ">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Administrative Staff </a>						
+								</li>
+								<li class="dropdown ">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Alumni </a>						
+								</li>
+							</ul>
+						</li>
+					
+					<li class="dropdown ">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">FACILITIES <i class="fa fa-angle-down"></i></a>
+							<ul class="dropdown-menu" role="menu">
+								<li class="dropdown ">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">FACILITY 1</a>								
+								</li>
+								<li class="dropdown ">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">FACILITY 2 </a>									
+								</li>
+								<li class="dropdown ">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">FACILITY 3  </a>						
+								</li>
+								
+							
+							</ul>
+						</li>
+						
+						<li class="dropdown ">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">PUBLICATIONS <i class="fa fa-angle-down"></i></a>
+							<ul class="dropdown-menu" role="menu">
+								<li class="dropdown ">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">2017</a>								
+								</li>
+								<li class="dropdown ">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">2016 </a>									
+								</li>
+															
+							</ul>
+						</li>
+						
+						<li class="dropdown ">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">EVENTS</a>
+							
+						</li>
+						
+						<li class="dropdown ">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">NEWS </a>
+							
+						</li>
+						
+						<li class="dropdown ">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">JOIN US</a>
+							
+						</li>
+						
+						
+					</ul>
+				</div>
+				<!-- END MAIN NAVIGATION -->
+			</div>
+		</nav>
+		<!-- END NAVBAR -->
+		<!-- SLIDER -->
+		<section id="slider-fullscreen" class="rev_slider no-padding">
+			<ul>
+				<li data-transition="crossfade">
+					<img src="assets/img/hero-unit/slide3.jpg" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" alt="Slide">
+					<div class="tp-caption tp-shape tp-shapewrapper slide-overlay-dark-gray" data-width="full" data-height="full" data-basealign="slide" data-transform_in="o:0;s:800;e:Power3.easeInOut;" data-transform_idle="o:1" data-transform_out="o:0;s:1500;e:Power3.easeInOut;" data-start="0">
+					</div>
+					<div class="tp-caption tp-resizeme lead-text light-text text-center" data-x="center" data-y="center" data-hoffset="0" data-voffset="-100" data-transform_in="o:0;y:-20;s:2000;" data-transform_idle="o:1;" data-transform_out="o:0;s:1500;e:Power3.easeInOut;" data-start="1300">
+						<p>Ad or news 1</p>
+					</div>
+					<div class="tp-caption tp-resizeme" data-x="center" data-y="center" data-hoffset="0" data-voffset="[150, 170, 180, 200]" data-transform_in="o:0;y:50;s:2000;" data-transform_idle="o:1;" data-transform_out="o:0;y:0;s:1500;e:Power3.easeInOut;" data-start="1900">
+						<a href="#" class="btn btn-primary btn-lg"><i class="fa fa-shopping-cart"></i> PURCHASE</a>
+					</div>
+				</li>
+				<li data-transition="slidingoverlaydown">
+					<img src="assets/img/hero-unit/slide4.jpg" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" alt="Slide">
+					<div class="tp-caption tp-shape tp-shapewrapper slide-overlay-dark-gray" data-width="full" data-height="full" data-basealign="slide" data-transform_in="o:0;s:1500;e:Power3.easeInOut;" data-transform_idle="o:1" data-transform_out="o:0;s:1000;e:Power3.easeInOut;" data-start="0">
+					</div>
+					<div class="tp-caption tp-resizeme light-text text-right" data-x="center" data-y="top" data-hoffset="0" data-voffset="50" data-transform_in="o:0;s:1500;" data-transform_idle="o:1;" data-transform_out="o:0;s:1500;e:Power3.easeInOut;" data-start="1500">
+						<h2 class="heading">Ad or news 2</h2>
+					</div>
+					
+					<div class="tp-caption tp-resizeme lead-text light-text text-right" data-x="center" data-y="bottom" data-hoffset="0" data-voffset="90" data-transform_in="o:0;y:100;s:1500;" data-transform_idle="o:1;" data-transform_out="o:0;y:50;s:1500;e:Power3.easeInOut;" data-start="2500">
+						<p><span class="label label-red">Save $14</span> to have the most popular premium slider</p>
+					</div>
+					<div class="tp-caption tp-resizeme text-right" data-x="center" data-y="bottom" data-hoffset="0" data-voffset="10" data-transform_in="o:0;y:100;s:1500;" data-transform_idle="o:1;" data-transform_out="o:0;y:50;s:1000;e:Power3.easeInOut;" data-start="2800">
+						<a href="#" class="btn btn-primary btn-lg"><i class="fa fa-shopping-cart"></i> PURCHASE</a>
+					</div>
+				</li>
+				<li data-transition="slidingoverlaydown">
+					<img src="assets/img/hero-unit/slide5.jpg" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" alt="Slide">
+					<div class="tp-caption tp-shape tp-shapewrapper slide-overlay-dark-gray" data-width="full" data-height="full" data-basealign="slide" data-transform_in="o:0;s:1500;e:Power3.easeInOut;" data-transform_idle="o:1" data-transform_out="o:0;s:1000;e:Power3.easeInOut;" data-start="0">
+					</div>
+					<div class="tp-caption tp-resizeme big-text light-text text-center" data-x="center" data-y="center" data-hoffset="0" data-voffset="-100" data-transform_in="o:0;sX:2;sY:2;s:2000;" data-transform_idle="o:1;" data-transform_out="o:0;sX:0.5;sY:0.5;s:1500;e:Power3.easeInOut;" data-start="1000">
+						<h2 class="heading">Ad or news 3</h2>
+					</div>
+					<div class="tp-caption tp-resizeme lead-text light-text text-center" data-x="center" data-y="center" data-hoffset="0" data-voffset="-10" data-transform_in="o:0;sX:2;sY:2;s:2000;" data-transform_idle="o:1;" data-transform_out="o:0;sX:0.5;sY:0.5;s:1500;e:Power3.easeInOut;" data-start="1300">
+						<p class="lead">text text text text text text text text text text </p>
+					</div>
+					<div class="tp-caption tp-resizeme light-text text-center" data-x="center" data-y="center" data-hoffset="0" data-voffset="80" data-transform_in="o:0;sX:2;sY:2;s:2000;" data-transform_idle="o:1;" data-transform_out="o:0;sX:0.5;sY:0.5;s:1500;e:Power3.easeInOut;" data-start="1600">
+						<a href="#" class="btn btn-primary btn-lg"><i class="fa fa-rocket"></i> Read more</a>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<!-- END SLIDER -->
+		<!-- CONTENT SLIDER -->
+		<section>
+			<div class="container">
+				<div class="section-heading section-heading-center">
+					<h2 class="heading">WHY BRAVANA</h2>
+					<p class="section-lead">Appropriately exploit 24/7 leadership skills without user friendly leadership.</p>
+				</div>
+				<div id="content-slider2" class="owl-carousel carousel-content">
+					<div>
+						<div class="media">
+							<div class="media-left">
+								<img src="assets/img/content-slider-img2.png" alt="">
+							</div>
+							<div class="media-body">
+								<h2>Multipurpose</h2>
+								<p>Quickly myocardinate strategic technologies with extensible e-tailers. Competently restore fully researched.</p>
+								<p>Quickly re-engineer next-generation services for standardized e-services. Continually streamline go forward ideas for cooperative interfaces. Collaboratively.</p>
+								<p>Quickly optimize open-source e-services with transparent communities. Completely enable best-of-breed results with mission-critical materials. Uniquely revolutionize user-centric human capital vis-a-vis just in time web services. Seamlessly strategize client-centric testing procedures before user-centric methods of empowerment. Rapidiously pontificate cost effective portals after extensible web-readiness.</p>
+								<a href="#">Learn More &nbsp;<i class="fa fa-angle-right"></i></a>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="media">
+							<div class="media-left">
+								<img src="assets/img/content-slider-img3.png" alt="">
+							</div>
+							<div class="media-body">
+								<h2>Predefined Color Skins</h2>
+								<p>Synergistically e-enable low-risk high-yield niche markets without real-time e-business. Interactively redefine 24/365 channels after customized convergence. Interactively synthesize B2C users after global networks. Phosfluorescently whiteboard bricks-and-clicks services after B2B schemas. Enthusiastically create leveraged channels after visionary ROI.</p>
+								<p>Quickly optimize open-source e-services with transparent communities. Completely enable best-of-breed results with mission-critical materials. Uniquely revolutionize user-centric human capital vis-a-vis just in time web services.</p>
+								<a href="#">Learn More &nbsp;<i class="fa fa-angle-right"></i></a>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="media">
+							<div class="media-left">
+								<img src="assets/img/content-slider-img.png" alt="Bravana">
+							</div>
+							<div class="media-body">
+								<div class="icon-info icon-info-left icon-info-big margin-bottom-30">
+									<i class="icon icon_pencil-edit ico-styled-square-solid bg-primary"></i>
+									<div class="text">
+										<h2 class="title">Carefully Handcrafted</h2>
+										<p>Holisticly harness just in time technologies via corporate scenarios. Intrinsicly predominate ubiquitous outsourcing through an expanded array of functionalities.</p>
+									</div>
+								</div>
+								<div class="icon-info icon-info-left icon-info-big margin-bottom-30">
+									<i class="icon icon_mobile ico-styled-square-solid bg-primary"></i>
+									<div class="text">
+										<h2 class="title">Mobile Friendly</h2>
+										<p>Holisticly harness just in time technologies via corporate scenarios. Intrinsicly predominate ubiquitous outsourcing through an expanded array of functionalities.</p>
+									</div>
+								</div>
+								<div class="icon-info icon-info-left icon-info-big margin-bottom-30">
+									<i class="icon icon_like ico-styled-square-solid bg-primary"></i>
+									<div class="text">
+										<h2 class="title">Slider Revolution</h2>
+										<p>Holisticly harness just in time technologies via corporate scenarios. Intrinsicly predominate ubiquitous outsourcing through an expanded array of functionalities.</p>
+									</div>
+								</div>
+								<a href="#">Learn More &nbsp;<i class="fa fa-angle-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END CONTENT SLIDER -->
+		<!-- FEATURES -->
+		<section>
+			<div class="container">
+				
+				<div class="row">
+					<div class="col-md-4">
+						<div class="icon-info icon-info-left">
+							<i class="icon icon_gift ico-styled-md text-primary"></i>
+							<div class="text">
+								<h2 class="title">FACILITIES</h2>
+								<p>Holisticly harness just in time technologies via corporate scenarios. Intrinsicly predominate ubiquitous outsourcing through an expanded array of functionalities.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="icon-info icon-info-left">
+							<i class="icon icon_heart_alt ico-styled-md text-primary"></i>
+							<div class="text">
+								<h2 class="title">PUBLICATIONS</h2>
+								<p>Holisticly harness just in time technologies via corporate scenarios. Intrinsicly predominate ubiquitous outsourcing through an expanded array of functionalities.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="icon-info icon-info-left">
+							<i class="icon icon_lightbulb ico-styled-md text-primary"></i>
+							<div class="text">
+								<h2 class="title">PEOPLE</h2>
+								<p>Holisticly harness just in time technologies via corporate scenarios. Intrinsicly predominate ubiquitous outsourcing through an expanded array of functionalities.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="icon-info icon-info-left no-margin-bottom">
+							<i class="icon icon_like ico-styled-md text-primary"></i>
+							<div class="text">
+								<h2 class="title">FREE UPDATES &amp; SUPPORT</h2>
+								<p>Holisticly harness just in time technologies via corporate scenarios. Intrinsicly predominate ubiquitous outsourcing through an expanded array of functionalities.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="icon-info icon-info-left no-margin-bottom">
+							<i class="icon icon_ul ico-styled-md text-primary"></i>
+							<div class="text">
+								<h2 class="title">TONS OF FEATURES</h2>
+								<p>Holisticly harness just in time technologies via corporate scenarios. Intrinsicly predominate ubiquitous outsourcing through an expanded array of functionalities.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="icon-info icon-info-left no-margin-bottom">
+							<i class="icon icon_genius ico-styled-md text-primary"></i>
+							<div class="text">
+								<h2 class="title">FLEXIBLE &amp; EASY TO USE</h2>
+								<p>Holisticly harness just in time technologies via corporate scenarios. Intrinsicly predominate ubiquitous outsourcing through an expanded array of functionalities.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END FEATURES -->
+		<!-- SHOWCASE -->
+		<section>
+			<div class="container">
+				<div class="section-heading section-heading-center">
+					<h2 class="heading">SHOWCASE</h2>
+					<p class="section-lead">Credibly revolutionize pandemic ideas vis-a-vis dynamic technologies.</p>
+				</div>
+			</div>
+			<div id="carousel-portfolio-simple" class="owl-carousel carousel-portfolio-simple carousel-nav-hidefirst">
+				<div>
+					<div class="portfolio-simple">
+						<img src="assets/img/portfolio/portfolio-sm1.jpg" class="img-responsive" alt="Portfolio">
+						<div class="info">
+							<h3 class="title">Mobile Devices</h3>
+							<span>Lifestyle, Gadgets, Apps</span>
+							<a href="#" class="btn btn-primary btn-sm">DETAILS</a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="portfolio-simple">
+						<img src="assets/img/portfolio/portfolio-sm2.jpg" class="img-responsive" alt="Portfolio">
+						<div class="info">
+							<h3 class="title">Talkshow</h3>
+							<span>Education, Business</span>
+							<a href="#" class="btn btn-primary btn-sm">DETAILS</a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="portfolio-simple">
+						<img src="assets/img/portfolio/portfolio-sm3.jpg" class="img-responsive" alt="Portfolio">
+						<div class="info">
+							<h3 class="title">Digital Art</h3>
+							<span>Photography</span>
+							<a href="#" class="btn btn-primary btn-sm">DETAILS</a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="portfolio-simple">
+						<img src="assets/img/portfolio/portfolio-sm4.jpg" class="img-responsive" alt="Portfolio">
+						<div class="info">
+							<h3 class="title">Productive Meeting</h3>
+							<span>Concept, Work</span>
+							<a href="#" class="btn btn-primary btn-sm">DETAILS</a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="portfolio-simple">
+						<img src="assets/img/portfolio/portfolio-sm5.jpg" class="img-responsive" alt="Portfolio">
+						<div class="info">
+							<h3 class="title">Panorama</h3>
+							<span>Photography, Nature</span>
+							<a href="#" class="btn btn-primary btn-sm">DETAILS</a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="portfolio-simple">
+						<img src="assets/img/portfolio/portfolio-sm6.jpg" class="img-responsive" alt="Portfolio">
+						<div class="info">
+							<h3 class="title">Design Workspace</h3>
+							<span>Personal, Work, Home Office</span>
+							<a href="#" class="btn btn-primary btn-sm">DETAILS</a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="portfolio-simple">
+						<img src="assets/img/portfolio/portfolio-sm7.jpg" class="img-responsive" alt="Portfolio">
+						<div class="info">
+							<h3 class="title">New City</h3>
+							<span>City, Architecture, Concept</span>
+							<a href="#" class="btn btn-primary btn-sm">DETAILS</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END SHOWCASE -->
+		<!-- TESTIMONIAL -->
+		<section>
+			<div class="container">
+				<div class="section-heading section-heading-center">
+					<h2 class="heading">TESTIMONIALS</h2>
+					<p class="section-lead">Credibly revolutionize pandemic ideas vis-a-vis dynamic technologies.</p>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="testimonial-rating">
+							<img src="assets/img/testimonial-author4.png" class="img-circle avatar" alt="avatar">
+							<div class="text">
+								<strong class="name">Rachel Ferguson</strong>
+								<span class="rating">
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-full"></i>
+							</span>
+								<h4 class="title">This is awesome!</h4>
+								<p class="content">Energistically empower seamless systems rather than granular web-readiness. Conveniently foster accurate total linkage vis-a-vis timely interfaces. Synergistically repurpose visionary.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="testimonial-rating">
+							<img src="assets/img/testimonial-author3.png" class="img-circle avatar" alt="avatar">
+							<div class="text">
+								<strong class="name">Anthony</strong>
+								<span class="rating">
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+							</span>
+								<h4 class="title">Totally worth it</h4>
+								<p class="content">Efficiently visualize impactful bandwidth whereas cooperative e-markets. Synergistically reintermediate technically sound results rather than exceptional niche markets.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="testimonial-rating no-margin-bottom">
+							<img src="assets/img/testimonial-author2.png" class="img-circle avatar" alt="avatar">
+							<div class="text">
+								<strong class="name">Edward Freeman</strong>
+								<span class="rating">
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+							</span>
+								<h4 class="title">Value for money</h4>
+								<p class="content">Efficiently envisioneer virtual materials rather than empowered outsourcing. Intrinsicly transform resource maximizing manufactured products and resource-leveling processes. Dramatically unleash cross-unit mindshare without next-generation communities. Efficiently procrastinate unique technologies after ethical.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="testimonial-rating no-margin-bottom">
+							<img src="assets/img/testimonial-author.png" class="img-circle avatar" alt="avatar">
+							<div class="text">
+								<strong class="name">Emily Murray</strong>
+								<span class="rating">
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-full"></i><i class="fa fa-star-o"></i>
+							</span>
+								<h4 class="title">Value for money</h4>
+								<p class="content">Efficiently envisioneer virtual materials rather than empowered outsourcing. Intrinsicly transform resource maximizing manufactured products and resource-leveling processes. Dramatically unleash cross-unit mindshare without next-generation communities. Efficiently procrastinate unique technologies after ethical.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END TESTIMONIAL -->
+		<!-- CALL TO ACTION -->
+		<section class="no-padding-bottom">
+			<div class="cta-big">
+				<div class="container">
+					<div class="main clearfix">
+						<img src="assets/img/bravana-all-homes.png" class="img-responsive main-img" alt="Bravana">
+						<div class="right">
+							<img src="assets/img/logo/bravana-default.png" alt="Bravana Logo">
+							<p>Multipurpose Bootstrap Theme</p>
+							<a href="#" class="btn btn-primary btn-lg"><i class="fa fa-shopping-cart"></i> PURCHASE</a>
+						</div>
+					</div>
+					<div class="row icon-info-group">
+						<div class="col-md-4">
+							<div class="icon-info icon-info-center">
+								<i class="icon icon_lifesaver ico-styled-md"></i>
+								<h3 class="title">Free Support</h3>
+								<p>Dynamically productivate reliable action items without an expanded array.</p>
+								<a href="#" class="more">Support Info <i class="fa fa-angle-right"></i></a>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="icon-info icon-info-center">
+								<i class="icon icon_cloud-download_alt ico-styled-md"></i>
+								<h3 class="title">Free Future Updates</h3>
+								<p>Dynamically productivate reliable action items without an expanded array.</p>
+								<a href="#" class="more">Getting an Update <i class="fa fa-angle-right"></i></a>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="icon-info icon-info-center">
+								<i class="icon icon_question_alt2 ico-styled-md"></i>
+								<h3 class="title">Ask Anything</h3>
+								<p>Dynamically productivate reliable action items without an expanded array.</p>
+								<a href="#" class="more">Ask a Question <i class="fa fa-angle-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END CALL TO ACTION -->
+		<!-- FOOTER -->
+		<footer class="has-border-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="row">
+							<div class="col-sm-6">
+								<h4 class="footer-heading footer-heading-simple">PSU</h4>
+								<ul class="list-unstyled link-list">
+									<li><a href="#">Main Website</a></li>
+									<li><a href="#">Who we are</a></li>
+									<li><a href="#">Career</a></li>
+									<li><a href="#">Terms</a></li>
+									<li><a href="#">Privacy Policy</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-6">
+								<h4 class="footer-heading footer-heading-simple">BUYING GUIDES</h4>
+								<ul class="list-unstyled link-list">
+									<li><a href="#">How to buy</a></li>
+									<li><a href="#">Product Guide</a></li>
+									<li><a href="#">License</a></li>
+									<li><a href="#">Payment</a></li>
+									<li><a href="#">Support</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="row">
+							<div class="col-md-6">
+								<h4 class="footer-heading footer-heading-simple">CONTACT US</h4>
+								<address>
+									<i class="icon icon_pin_alt ico-styled text-primary"></i> 1234 North Main Street New York, NY 22222
+									<br>
+									<br>
+									<i class="icon icon_phone ico-styled text-primary"></i>
+									<abbr title="Phone">P:</abbr> (1800) 765 - 4321
+								</address>
+								<address><i class="icon icon_mail_alt ico-styled text-primary"></i> <a href="mailto:email@yourdomain.com">email@yourdomain.com</a></address>
+							</div>
+							<div class="col-md-6">
+								<h4 class="footer-heading footer-heading-simple">NEWSLETTER</h4>
+								<p>Get the latest update from us by subscribing to our newsletter.</p>
+								<form class="newsletter-form" method="post">
+									<div class="input-group input-group-lg">
+										<input type="email" class="form-control" name="email" placeholder="youremail@domain.com">
+										<span class="input-group-btn"><button class="btn btn-primary" type="button"><i class="fa fa-spinner fa-spin"></i><span>SUBSCRIBE</span></button>
+										</span>
+									</div>
+									<div class="alert"></div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="copyright-text text-center margin-top-30 no-margin-bottom">&copy;2016 The Develovers. All Rights Reserved.</p>
+		</footer>
+		<!-- END FOOTER -->
+		<div class="back-to-top">
+			<a href="#top"><i class="fa fa-chevron-up"></i></a>
+		</div>
+	</div>
+	<!-- END WRAPPER -->
+	<!-- JAVASCRIPT -->
+	<script src="assets/js/jquery-2.1.1.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/plugins/easing/jquery.easing.min.js"></script>
+	<script src="assets/js/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+	<script src="assets/js/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+	<script src="assets/js/plugins/owl-carousel/owl.carousel.min.js"></script>
+	<script src="assets/js/bravana.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script type="text/javascript" src="assets/js/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="assets/js/plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script type="text/javascript" src="assets/js/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="assets/js/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script type="text/javascript" src="assets/js/plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="assets/js/plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script type="text/javascript" src="assets/js/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+
+</body>
+
+</html>

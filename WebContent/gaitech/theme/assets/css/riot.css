@@ -1,0 +1,63 @@
+@font-face {
+    font-family:  museosans;
+    src: url(../fonts/museosans-100-webfont.ttf);
+}
+
+.museosans{
+	font-family: museosans
+}
+
+.paragraph_large {
+    font-size: 0.9em;
+    line-height: 160%;
+    color: black;
+}
+
+.keywords {
+    font-size: 0.8em;
+}
+
+.sm {
+    font-size: 0.9em;
+}
+
+.publication{
+	
+	background-color: #ffffff;
+	margin: 10px;
+	padding: 10px;
+	font-size: 0.9em;
+	border-style:  none none none solid;
+	border-color: #708090;
+}
+
+.publication a{
+   color: #708090;
+}
+
+.forest_green{
+	color: #228B22;
+}
+
+.stale_gray{
+	color: #708090;
+}
+
+
+
+.gold{
+	color: #DAA520;
+}
+
+img.center {
+	display: block;
+    margin: 0 auto;
+}
+
+.indexing {
+    font-size: 0.7em;
+}
+
+.banner_news{
+	font-size: 0.8em;
+}
