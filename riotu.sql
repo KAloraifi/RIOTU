@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 28, 2017 at 12:10 PM
+-- Generation Time: Dec 01, 2017 at 10:54 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
@@ -84,9 +84,10 @@ CREATE TABLE `project` (
 --
 
 CREATE TABLE `user` (
-  `id` int(11) NOT NULL,
+  `username` varchar(20) NOT NULL,
   `firstname` varchar(50) NOT NULL,
   `lastname` varchar(50) NOT NULL,
+  `password` varchar(20) NOT NULL,
   `role` varchar(30) NOT NULL,
   `birth_date` date NOT NULL,
   `join_date` int(11) NOT NULL
@@ -118,7 +119,7 @@ ALTER TABLE `project`
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`username`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -140,12 +141,6 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT for table `project`
 --
 ALTER TABLE `project`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
