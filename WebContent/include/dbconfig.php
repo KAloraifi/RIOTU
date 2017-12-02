@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "riotu";
+$servername = "eu-cdbr-sl-lhr-01.cleardb.net";
+$username = "b5525871cace04";
+$password = "9debeae1";
+$dbname = "ibmx_4d4c005fa5d05f9";
 
 // Create connection
 $dbconn = new mysqli($servername, $username, $password, $dbname);
