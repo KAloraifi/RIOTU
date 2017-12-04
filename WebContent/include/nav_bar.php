@@ -22,8 +22,7 @@
 						</form>
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="http://edu.gaitech.hk">Gaitech EDU</a></li>
-							<li><a href="http://wiki.coins-lab.org">COINS WiKi</a></li>
-							<li><a href="index.php" class="as-button"><span class="btn btn-primary">HOME</span></a></li>
+							<li><a href="login.php" class="as-button"><span class="btn btn-primary">LOG IN</span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -35,14 +34,14 @@
 					<span class="sr-only">Toggle Navigation</span> <i
 						class="fa fa-bars"></i>
 				</button>
-				
-				
+
+
 				<div id="main-nav-collapse" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav main-navbar-nav">
 						<li><a href="index.php" ><span style="font-style: bold;">HOME</span></a></li>
-						
+
 						<li><a href="about.php">ABOUT <i></i></a></li>
-						
+
 						<li class="dropdown "><a href="research.php" class="dropdown-toggle" data-toggle="dropdown">RESEARCH <i class="fa fa-angle-down"></i></a>
 							</li>
 						<li class="dropdown "><a href="people.php" class="dropdown-toggle"
@@ -65,14 +64,14 @@
 							data-toggle="dropdown">COLLABORATION </a></li>
 							<li class="dropdown "><a href="http://wiki.coins-lab.org"
 					class="dropdown-toggle" data-toggle="dropdown">WIKI </a></li>
-					<!-- 
+					<!--
 					PSU LOGO
-					
+
 					<li><a href="index.php" class="navbar-brand"> <img
 					src="images/psu-logo-square.png" width = "50%" style ="display:block; float: left;"  alt="PSU Logo">
 				</a></li> -->
-					
-					
+
+
 					</ul>
 				</div>
 				<!-- END MAIN NAVIGATION -->
