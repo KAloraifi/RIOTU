@@ -1,3 +1,7 @@
+
+<?php
+session_start();
+?>
 <!-- CORE CSS -->
 <link href="theme/assets/css/bootstrap.css" rel="stylesheet"
 	type="text/css">

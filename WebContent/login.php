@@ -10,11 +10,51 @@
 <!-- CORE CSS -->
 <?php
 include_once 'include/headers_links.php';
+include "include/dbconfig.php";
+
 ?>
 </head>
 
 <body>
 	<!-- WRAPPER -->
+
+            
+        <?php
+				
+	if (isset($_SESSION["username"])){
+	    header('location: index.php');
+	}
+    
+    if (! isset($_GET["username"]) || ! isset($_GET["password"])) {} else {
+        
+        $username = $_GET["username"];
+        $password = $_GET["password"];
+        
+        $sql = "select * from user where username = '" . $username . "' and password = '" . $password . "'";
+        // echo $sql;
+        
+        $result = $conn->query($sql);
+        
+        if ($result->num_rows == 1) {
+            $row = $result->fetch_assoc();
+            
+            
+            $_SESSION["username"] = $username;
+            $_SESSION["firstname"] = $row["firstname"];
+            $_SESSION["lastname"] = $row["lastname"];
+            $_SESSION["role"] = $row["role"];
+            if($row["role"] == "admin"){
+                header('location: admin.php');
+            }
+            else
+             header('location: index.php');
+        } else {
+            echo "<p> Incorrect username and/or password";
+        }
+    }
+    
+    ?>    
+
   <div id="wrapper">
 	<?php
     include_once 'include/nav_bar.php';
@@ -23,7 +63,7 @@ include_once 'include/headers_links.php';
 		<!-- PAGE HEADER DEFAULT -->
 		<div class="page-header">
 			<div class="container">
-				<h1 class="page-title pull-left">LOGIN</h1>
+				<h1 class="page-title pull-left">LogIn</h1>
 				<ol class="breadcrumb link-accent">
 					<li><a href="index.php">Home</a></li>
 
@@ -39,7 +79,7 @@ include_once 'include/headers_links.php';
 				<div class="well well-form-wrapper center-block">
 					<p class="lead">Enter your username and password:</p>
 					<form class="form-horizontal label-left"
-					action=<?php echo $_SERVER['PHP_SELF']; ?> method="get">
+					<?php echo $_SERVER["PHP_SELF"];?> method="get">
 						<div class="form-group">
 							<label for="signin-username" class="col-sm-3 control-label">Username*</label>
 							<div class="col-sm-9">

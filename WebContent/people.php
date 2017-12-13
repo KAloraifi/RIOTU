@@ -43,6 +43,8 @@
 	<!-- WRAPPER -->
 	<div id="wrapper">
 	<?php
+        session_start();
+
 	include_once 'include/nav_bar.php';
 	?>
 		<!-- END NAVBAR -->
