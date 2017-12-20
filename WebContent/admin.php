@@ -26,9 +26,7 @@ include_once 'include/headers_links.php';
 		<!-- PAGE HEADER DEFAULT -->
 		<div class="page-header">
 			<div class="container">
-				<h1 class="page-title pull-left"><?php if (isset($_SESSION["firstname"])) {
-        echo "<p> Welcome " . $_SESSION["firstname"];
-    }  ?></h1>
+				<h1 class="page-title pull-left"><?php if(isset($_SESSION["firstname"]))echo "<p> Welcome " . $_SESSION["firstname"];  ?></h1>
 				<ol class="breadcrumb link-accent">
 					<li><a href="index.php">Home</a></li>
 
@@ -43,158 +41,198 @@ include_once 'include/headers_links.php';
 				<!-- SIGN UP FORM -->
 				<div class="well well-form-wrapper col-sm-6 ">
 					<p class="lead">Add a user</p>
-          <form class="form-horizontal label-left">
-            <div class="form-group">
-							<div class="form-group">
-  							<label for="signin-username" class="col-sm-2 control-label">FirstName*</label>
-  							<div class="col-sm-9">
-  								<input type="text" class="form-control" id="firstname"
-  									name="firstname">
-  							</div>
-              </div>
-              <div class="form-group">
-  							<label for="signin-password" class="col-sm-2  control-label">LastName*</label>
-  							<div class="col-sm-9">
-  								<input  class="form-control" id="lastname"
-  									name="lastname">
-  							</div>
-						  </div>
-              <div class="form-group">
-  							<label for="signin-username" class="col-sm-2 control-label">Username*</label>
-  							<div class="col-sm-9">
-  								<input type="text" class="form-control" id="username"
-  									name="username"><br>
-                  <p id="used" class="" style="display:none;"></p>
-  							</div>
-              </div>
-              <div class="form-group">
-  							<label for="signin-password" class="col-sm-2  control-label">Password*</label>
-  							<div class="col-sm-9">
-  								<input type="password" class="form-control" id="password"
-  									name="password">
-  							</div>
-						  </div>
-              <div class="form-group">
-  							<label for="signin-password" class="col-sm-2  control-label">Role*</label>
-  							<div class="col-sm-9">
-  								<input  class="form-control" id="role"
-  									name="role">
-  							</div>
-						  </div>
-              <div class="form-group">
-  							<label for="signin-password" class="col-sm-2  control-label">BirthDate</label>
-  							<div class="col-sm-9">
-  								<input  class="form-control" id="birth_date"
-  									name="birth_date">
-  							</div>
-			        </div>
-             <button type="button" class="btn btn-primary btn-lg center-block" onclick="registerationRequest()" id="adduser"><i class="fa fa-sign-in"></i> Add</button>
-             <br><p id="added" class=""></p>
-           </div>
-         </form>
 
-    <!-- END SIGN IN FORM -->
+                                        <form class="form-horizontal label-left">
 
-    <!-- Remove FORM -->
-      <div class="col-sm-6 ">
-        <div class="well well-form-wrapper">
-          <p class="lead">Remove a user</p>
-          <form class="form-horizontal label-left">
-            <div class="form-group">
-              <div class="form-group">
-                <label for="signin-username" class="col-sm-2 control-label">Username*</label>
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" id="usernameremove"
-                  name="usernameremove"><br>
-                  <p id="remove"></p>
-                </div>
-              </div>
-            </div>
-            <button type="button" class="btn btn-primary btn-lg center-block" onclick="RemoveRequest()"><i class="fa fa-sign-out"></i> Remove</button>
-          </form>
+                                                <div class="form-group">
 
-      <div class="well well-form-wrapper">
-        <p class="lead">Update Data</p>
-        <form class="form-horizontal label-left">
-        <div class="form-group">
-          <div class="form-group">
-            <label for="signin-username" class="col-sm-2 control-label">Username*</label>
-            <div class="col-sm-9">
-              <input type="text" class="form-control" id="usernamedisplay"
-                name="usernamedisplay">
-              <button type="button" class="btn btn-primary btn-lg center-block" onclick="DisplayRequest()">Display info</button><br>
-              <p id="display"></p>
-            </div>
-           </div>
+                                                    <div class="form-group">
+							<label for="signin-username" class="col-sm-2 control-label">FirstName*</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="firstname"
+									name="firstname">
+							</div>
+                                                        </div>
 
-           <form class="form-horizontal label-left" style="display:none; ">
-           <div class="form-group">
-             <div class="form-group">
-               <label for="signin-username" class="col-sm-2 control-label">FirstName*</label>
-               <div class="col-sm-9">
-                 <input type="text" class="form-control" id="firstname_up"
-                  name="firstname">
-                </div>
-              </div>
-            </div>
 
-            <div class="form-group">
-              <label for="signin-password" class="col-sm-2  control-label">LastName*</label>
-              <div class="col-sm-9">
-                <input  class="form-control" id="lastname_up"
-                  name="lastname">
-              </div>
-            </div>
+                                                        <div class="form-group">
+							<label for="signin-password" class="col-sm-2  control-label">LastName*</label>
+							<div class="col-sm-9">
+								<input  class="form-control" id="lastname"
+									name="lastname">
+							</div>
+						</div>
 
-            <div class="form-group">
-              <label for="signin-username" class="col-sm-2 control-label">Username*</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" id="username_up"
-                  name="username"><br>
-              </div>
-            </div>
 
-            <div class="form-group" id="update_user">
-              <label for="signin-password" class="col-sm-2  control-label">Password*</label>
-              <div class="col-sm-9">
-                <input type="password" class="form-control" id="password_up"
-                  name="password">
-              </div>
-            </div>
+                                                    <div class="form-group">
+							<label for="signin-username" class="col-sm-2 control-label">Username*</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="username"
+									name="username"><br>
+                                                                <p id="used" class="" style="display:none;"></p>
+							</div>
+                                                        </div>
 
-            <div class="form-group">
-              <label for="signin-password" class="col-sm-2  control-label">Role*</label>
-              <div class="col-sm-9">
-                <input  class="form-control" id="role_up"
-                  name="role">
-              </div>
-            </div>
 
-            <div class="form-group">
-              <label for="signin-password" class="col-sm-2  control-label">BirthDate</label>
-              <div class="col-sm-9">
-                <input  class="form-control" id="birth_date_up"
-                  name="birth_date">
-              </div>
-            </div>
+                                                        <div class="form-group">
+							<label for="signin-password" class="col-sm-2  control-label">Password*</label>
+							<div class="col-sm-9">
+								<input type="password" class="form-control" id="password"
+									name="password">
+							</div>
+						</div>
 
-            <div class="form-group">
-              <label for="signin-password" class="col-sm-2  control-label">joinDate</label>
-              <div class="col-sm-9">
-                <input  class="form-control" id="join_date_up"
-                  name="join_date">
-              </div>
-            </div>
-            <button type="button" class="btn btn-primary btn-lg center-block" onclick="UpdateRequest()"><i class="fa fa-recycle"></i> Update</button>
-            <br><p id="updatep" class=""></p>
+                                                     <div class="form-group">
+							<label for="signin-password" class="col-sm-2  control-label">Role*</label>
+							<div class="col-sm-9">
+								<input  class="form-control" id="role"
+									name="role">
+							</div>
+						</div>
 
-           </form>
-          </div>
-        </div>
-      </div>
-    </div>
-      <!-- END Remove IN FORM -->
+                                                     <div class="form-group">
+							<label for="signin-password" class="col-sm-2  control-label">BirthDate</label>
+							<div class="col-sm-9">
+								<input  class="form-control" id="birth_date"
+									name="birth_date">
+							</div>
+						</div>
+
+
+
+                                                 <button type="button" class="btn btn-primary btn-lg center-block" onclick="RegisterationRequest()" id="adduser"><i class="fa fa-sign-in"></i> Add</button>
+                                                 <br><p id="added" class=""></p>
+
+
+
+
+                                             </form>
+					</div>
+
+
+
+	<!-- END SIGN IN FORM -->
+
+			</div>
+
+                                 <!-- Remove FORM -->
+                                  <div class="col-sm-6 ">
+                                      <div class="well well-form-wrapper">
+					<p class="lead">Remove a user</p>
+                                        <form class="form-horizontal label-left">
+                                             <div class="form-group">
+
+                                               <div class="form-group">
+							<label for="signin-username" class="col-sm-2 control-label">Username*</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="usernameremove"
+									name="usernameremove"><br>
+                                                                <p id="remove"></p>
+							</div>
+                                                        </div>
+
+                                             <button type="button" class="btn btn-primary btn-lg center-block" onclick="RemoveRequest()"><i class="fa fa-sign-out"></i> Remove</button>
+
+
+                                             </form>
+					</div>
+                                    </div>
+
+                                           <div class="well well-form-wrapper">
+					<p class="lead">Update Data</p>
+                                        <form class="form-horizontal label-left">
+                                             <div class="form-group">
+
+                                               <div class="form-group">
+							<label for="signin-username" class="col-sm-2 control-label">Username*</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="usernamedisplay"
+									name="usernamedisplay">  <button type="button" class="btn btn-primary btn-lg center-block" onclick="DisplayRequest()">Display info</button><br>
+                                                                <p id="display"></p>
+                                                        </div>
+                                                         </div>
+
+
+                                        <form class="form-horizontal label-left" style="display:none; ">
+
+                                                <div class="form-group">
+
+                                                    <div class="form-group">
+							<label for="signin-username" class="col-sm-2 control-label">FirstName*</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="firstname_up"
+									name="firstname">
+							</div>
+                                                        </div>
+
+
+                                                        <div class="form-group">
+							<label for="signin-password" class="col-sm-2  control-label">LastName*</label>
+							<div class="col-sm-9">
+								<input  class="form-control" id="lastname_up"
+									name="lastname">
+							</div>
+						</div>
+
+
+                                                    <div class="form-group">
+							<label for="signin-username" class="col-sm-2 control-label">Username*</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="username_up"
+									name="username"><br>
+
+							</div>
+                                                        </div>
+
+
+                                                        <div class="form-group" id="update_user">
+							<label for="signin-password" class="col-sm-2  control-label">Password*</label>
+							<div class="col-sm-9">
+								<input type="password" class="form-control" id="password_up"
+									name="password">
+							</div>
+						</div>
+
+                                                     <div class="form-group">
+							<label for="signin-password" class="col-sm-2  control-label">Role*</label>
+							<div class="col-sm-9">
+								<input  class="form-control" id="role_up"
+									name="role">
+							</div>
+						</div>
+
+                                                     <div class="form-group">
+							<label for="signin-password" class="col-sm-2  control-label">BirthDate</label>
+							<div class="col-sm-9">
+								<input  class="form-control" id="birth_date_up"
+									name="birth_date">
+							</div>
+						</div>
+
+                                                     <div class="form-group">
+							<label for="signin-password" class="col-sm-2  control-label">joinDate</label>
+							<div class="col-sm-9">
+								<input  class="form-control" id="join_date_up"
+									name="join_date">
+							</div>
+						</div>
+							</div>
+                                                        </div>
+
+                                             <button type="button" class="btn btn-primary btn-lg center-block" onclick="UpdateRequest()"><i class="fa fa-recycle"></i> Update</button>
+                                              <br><p id="updatep" class=""></p>
+
+                                             </form>
+					</div>
+                                    </div>
+                                </div>
+                                <!-- END Remove IN FORM -->
 		</div>
+
+
+
+
+
 	</div>
 		<!-- END PAGE CONTENT -->
 		<!-- FOOTER -->
@@ -218,10 +256,8 @@ include_once 'include/headers_links.php';
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-54522619-4', 'auto');
   ga('send', 'pageview');
-
 </script>
 
 
