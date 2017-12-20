@@ -100,7 +100,7 @@ include_once 'include/headers_links.php';
 
 
 
-                                                 <button type="button" class="btn btn-primary btn-lg center-block" onclick="RegisterationRequest()" id="adduser"><i class="fa fa-sign-in"></i> Add</button>
+                                                 <button type="button" class="btn btn-primary btn-lg center-block" onclick="registerationRequest()" id="adduser"><i class="fa fa-sign-in"></i> Add</button>
                                                  <br><p id="added" class=""></p>
 
 
