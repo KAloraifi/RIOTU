@@ -10,7 +10,7 @@
 <!-- CORE CSS -->
 <?php
 include_once 'include/headers_links.php';
-include "include/dbconfig.php";
+include "include/dbconfig2.php";
 
 ?>
 </head>

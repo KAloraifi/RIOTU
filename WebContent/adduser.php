@@ -1,6 +1,6 @@
 <?php
 
-include "include/dbconfig.php";
+include "include/dbconfig2.php";
 
 header('Content-Type: text/xml');
 echo ('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>');
@@ -14,6 +14,8 @@ $username = $_POST["username"];
 $password = $_POST["password"];
 $role = $_POST["role"];
 $birth_date = $_POST["birth_date"];
+
+
 
         $sql = "select * from user where username = '" . $username."'";
         // echo $sql;
@@ -29,4 +31,6 @@ $birth_date = $_POST["birth_date"];
             $conn->query($sql1);
             echo"<message>Added</message>";
         }
+
+
 ?>

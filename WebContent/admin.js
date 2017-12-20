@@ -32,12 +32,21 @@ function RegisterationRequest(){
                
                 var password = document.getElementById("password").value;
                 var role = document.getElementById("role").value;
+                
+                   if((username.localeCompare("") ==0)||(firstname.localeCompare("") ==0)||(lastname.localeCompare("") ==0)||(password.localeCompare("") ==0)||(role.localeCompare("") ==0)){
+                       
+                                document.getElementById("added").innerHTML = "Fill the required fields please";
+                                document.getElementById("added").className="alert alert alert-danger";
+                  
+               }else{
+               
+               
                 var birth_date = document.getElementById("birth_date").value;
 		xmlHttp.open("POST", "adduser.php", true);
 		xmlHttp.onreadystatechange= ListResponseCallback;
 		xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		xmlHttp.send("firstname="+firstname+"&lastname="+lastname+"&username="+username+"&password="+password+"&role="+role+"&birth_date="+birth_date);
-                        ///alert("sucsses");
+                        }
     }}
     
     
@@ -50,18 +59,28 @@ function ListResponseCallback(){
 			
 			
 			var  message = xmlResponse.getElementsByTagName("message")[0].childNodes[0].nodeValue;
-                        if(message.localeCompare("Added") ){
-                            document.getElementById("added").className = "alert alert-success";
-                            document.getElementById("added").innerHTML = message;
-                        }
+                       
+                        if(message.localeCompare("Added")==0 ){
                             
-                        else{
-                            document.getElementById("used").className = "alert alert-warning";
-                            document.getElementById("used").innerHTML = message;
+                             document.getElementById("added").style.display= "block";
+                            document.getElementById("added").innerHTML = message;
+                            document.getElementById("added").className="alert alert alert-success";
+                            document.getElementById("used").style.display = "none";
+                            
+                            
+                            
                         }
-			alert("message: " + message);
-			//document.getElementById("search_result").innerHTML = message;
-				//document.getElementById("plist").innerHTML = txt;				
+                             
+    
+                              
+                        else {
+                            document.getElementById("used").style.display = "block";
+                            document.getElementById("used").innerHTML = message;
+                            document.getElementById("used").className="alert alert alert-danger";
+                            document.getElementById("added").style.display= "none";
+                        }
+			
+						
 			
 			
 			
@@ -73,5 +92,56 @@ function ListResponseCallback(){
 }
 
 }
+
+function RemoveRequest(){
+
+	if (xmlHttp.readyState ==0 || xmlHttp.readyState ==4){
+                var username = document.getElementById("usernameremove").value;
+                
+               if(username.localeCompare("") ==0){
+                   document.getElementById("remove").innerHTML = "Fill the username field please";
+                   document.getElementById("remove").className="alert alert alert-danger";
+                  
+               }
+               else{
+                
+		xmlHttp.open("POST", "removeuser.php", true);
+		xmlHttp.onreadystatechange= removeCallback;
+		xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xmlHttp.send("username="+username);
+                
+            }
+                        
+    }}
+
+function removeCallback(){
+    if (xmlHttp.readyState==4){
+		if (xmlHttp.status==200){
+			var xmlResponse = xmlHttp.responseXML;
+			
+			
+			var  message = xmlResponse.getElementsByTagName("message")[0].childNodes[0].nodeValue;
+                        
+                         if(message.localeCompare("Record deleted successfully")==0 ){
+                            
+                            document.getElementById("remove").innerHTML = message;
+                            document.getElementById("remove").className="alert alert alert-success";
+                            
+                            
+                            
+                        }
+                             
+                        else{
+                            
+                            document.getElementById("remove").innerHTML = message;
+                            document.getElementById("remove").className="alert alert alert-danger";
+                        }
+
+		}
+			
+}
+}
+
+
 
 
