@@ -44,7 +44,7 @@ function registerationRequest() {
 
       var birth_date = document.getElementById("birth_date").value;
       xmlHttp.open("POST", "adduser.php", true);
-      xmlHttp.onreadystatechange = RegisterationResponse;
+      xmlHttp.onreadystatechange = registerationResponse;
       xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xmlHttp.send("firstname=" + firstname + "&lastname=" + lastname + "&username=" + username + "&password=" + password + "&role=" + role + "&birth_date=" + birth_date);
 
@@ -90,7 +90,7 @@ function registerationResponse() {
       } else {
 
         xmlHttp.open("POST", "removeuser.php", true);
-        xmlHttp.onreadystatechange = removeCallback;
+        xmlHttp.onreadystatechange = removeResponse;
         xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xmlHttp.send("username=" + username);
 

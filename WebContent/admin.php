@@ -131,7 +131,7 @@ include_once 'include/headers_links.php';
 							</div>
                                                         </div>
 
-                                             <button type="button" class="btn btn-primary btn-lg center-block" onclick="RemoveRequest()"><i class="fa fa-sign-out"></i> Remove</button>
+                                             <button type="button" class="btn btn-primary btn-lg center-block" onclick="removeRequest()"><i class="fa fa-sign-out"></i> Remove</button>
 
 
                                              </form>

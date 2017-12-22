@@ -18,42 +18,44 @@ include "include/dbconfig2.php";
 <body>
 	<!-- WRAPPER -->
 
-            
+
         <?php
-				
-	if (isset($_SESSION["username"])){
-	    header('location: index.php');
-	}
-    
-    if (! isset($_GET["username"]) || ! isset($_GET["password"])) {} else {
-        
+
+    if (isset($_SESSION["username"])) {
+        header('location: index.php');
+    }
+
+    if (! isset($_GET["username"]) || ! isset($_GET["password"])) {
+    } else {
         $username = $_GET["username"];
         $password = $_GET["password"];
-        
+
         $sql = "select * from user where username = '" . $username . "' and password = '" . $password . "'";
         // echo $sql;
-        
+
         $result = $conn->query($sql);
-        
+
         if ($result->num_rows == 1) {
             $row = $result->fetch_assoc();
-            
-            
+
             $_SESSION["username"] = $username;
             $_SESSION["firstname"] = $row["firstname"];
             $_SESSION["lastname"] = $row["lastname"];
             $_SESSION["role"] = $row["role"];
-            if($row["role"] == "admin"){
+
+            if ($row["role"] == "admin") {
                 header('location: admin.php');
+            } elseif ($row["role"] == "director") {
+                header('location: director.php');
+            } else {
+                header('location: index.php');
             }
-            else
-             header('location: index.php');
         } else {
-            echo "<p> Incorrect username and/or password";
+            echo "<p>Incorrect username and/or password</p>";
         }
     }
-    
-    ?>    
+
+    ?>
 
   <div id="wrapper">
 	<?php
