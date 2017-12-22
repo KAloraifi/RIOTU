@@ -55,17 +55,43 @@ $role = $_POST["role"];
 $birth_date = $_POST["birth_date"];
 $join_date = $_POST["join_date"];
 
+if($username != $_SESSION["usernameupdate"]){
+$sql = "select * from user where username = '" . $username."'";
 
-
-
-
+$result = $conn->query($sql);
+if ($result->num_rows == 1) {
+    echo "<response>";
+    echo"<message>This username already exists.</message>";
+    echo "<code>-1</code>";
+    echo "</response>";
+} 
+else {
+    
 $sql = "UPDATE user SET firstname='".$firstname."',lastname='".$lastname."',username='".$username."',password='".$password."',birth_date='".$birth_date."' WHERE username='".$_SESSION["usernameupdate"]."';" ;
-
+ echo "<response>";
  if (mysqli_query($conn, $sql)) {
     echo "<message>Record updated successfully</message>";
+     echo "<code>1</code>";
 } else {
     echo "<message>Error updating record: " . mysqli_error($conn)."</message>";
+    echo "<code>-1</code>";
+}
+ echo "</response>";
 }
 }
-       
+
+else{
+    $sql = "UPDATE user SET firstname='".$firstname."',lastname='".$lastname."',username='".$username."',password='".$password."',birth_date='".$birth_date."' WHERE username='".$_SESSION["usernameupdate"]."';" ;
+ echo "<response>";
+ if (mysqli_query($conn, $sql)) {
+    echo "<message>Record updated successfully</message>";
+     echo "<code>1</code>";
+} else {
+    echo "<message>Error updating record: " . mysqli_error($conn)."</message>";
+    echo "<code>-1</code>";
+}
+ echo "</response>";
+    
+}
+}
 ?>

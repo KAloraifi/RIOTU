@@ -47,16 +47,12 @@ function DisplayRequest() {
 
 function DisplayCallback() {
 
-
-
-
   if (xmlHttp.responseXML == null) {
     var xmlResponse = xmlHttp.responseText;
 
     var message = JSON.parse(xmlResponse);
 
-
-
+    document.getElementById("userUpdateForm").style.display = "block";
     document.getElementById("display").style.display = "none";
     document.getElementById("firstname_up").setAttribute("value", message.firstname);
     document.getElementById("lastname_up").setAttribute("value", message.lastname);
@@ -67,13 +63,15 @@ function DisplayCallback() {
     document.getElementById("role_up").setAttribute("value", message.role);
     document.getElementById("birth_date_up").setAttribute("value", message.birth_date);
     document.getElementById("join_date").setAttribute("value", message.join_date);
-
+    
 
   } else {
     var xmlResponse1 = xmlHttp.responseXML;
     var message1 = xmlResponse1.getElementsByTagName("message")[0].childNodes[0].nodeValue;
     document.getElementById("display").innerHTML = message1;
     document.getElementById("display").className = "alert alert alert-danger";
+    document.getElementById("userUpdateForm").style.display = "none";
+     document.getElementById("display").style.display = "block";
 
   }
 }
@@ -110,14 +108,23 @@ function UpdateRequest() {
 }
 
 function UpdateCallback() {
-  if (xmlHttp.readyState == 4) {
-    if (xmlHttp.status == 200) {
-      var xmlResponse = xmlHttp.responseXML;
+      if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+    var xmlResponse = xmlHttp.responseXML;
+    var response = xmlResponse.getElementsByTagName("response")[0];
 
+    if (response.childNodes[1].childNodes[0].nodeValue == 1) {
 
-      var message = xmlResponse.getElementsByTagName("message")[0].childNodes[0].nodeValue;
-      document.getElementById("updatep").innerHTML = message;
+      document.getElementById("updatep").style.display = "block";
+      document.getElementById("updatep").innerHTML = response.childNodes[0].childNodes[0].nodeValue;
       document.getElementById("updatep").className = "alert alert alert-success";
+      
+
+    } else {
+
+      document.getElementById("updatep").style.display = "block";
+      document.getElementById("updatep").innerHTML = response.childNodes[0].childNodes[0].nodeValue;
+      document.getElementById("updatep").className = "alert alert alert-danger";
+      
 
     }
   }

@@ -1,6 +1,1 @@
 /* your custom styles here */
-
-/* This will make a non value option for the select in adding conference or project. */
-#type:focus option:first-of-type {
-    display: none;
-}
