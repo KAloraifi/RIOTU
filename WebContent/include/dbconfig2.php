@@ -1,8 +1,8 @@
 <?php 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "webproject";
+$servername = "us-cdbr-sl-dfw-01.cleardb.net";
+$username = "bafa2b32948060";
+$password = "e2b24cf4";
+$dbname = "ibmx_12a479670a1fd4a";
 
 
 // Create connection
