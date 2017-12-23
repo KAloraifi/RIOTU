@@ -8,7 +8,7 @@ if (isset($_GET['name'])) {
     $name = $_GET['name'];
     $_SESSION["nameupdate"]=$name;
 
-    $sql = "SELECT * FROM conference WHERE name = '".$name."'";
+    $sql = "SELECT * FROM conferences WHERE name = '".$name."'";
 
     $result = $conn->query($sql);
     $output = $result->fetch_all(MYSQLI_ASSOC);
@@ -18,7 +18,7 @@ if (isset($_GET['name'])) {
     $name = $_GET['name'];
     $_SESSION["nameupdate"]=$name;
 
-    $sql = "SELECT * FROM project WHERE name = '".$name."'";
+    $sql = "SELECT * FROM projects WHERE name = '".$name."'";
 
     $result = $conn->query($sql);
     $output = $result->fetch_all(MYSQLI_ASSOC);

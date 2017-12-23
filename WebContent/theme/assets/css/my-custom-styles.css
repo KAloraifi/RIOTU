@@ -1,1 +1,4 @@
 /* your custom styles here */
+select:focus option:first-of-type {
+    display: none;
+}

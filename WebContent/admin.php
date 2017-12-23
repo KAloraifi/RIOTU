@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -8,11 +8,11 @@
 ?>
 
         <select id="functionalty" onchange="functionlaty()" class="center-block">
-                        <option value="select">select</option>
+                        <option>select</option>
                        <option value="users">users</option>
                         <option value="publications">publications</option>
                         <option value="news">news</option>
-                        
+
                     </select><br>
                     <script>
                     function functionlaty(){
@@ -33,7 +33,7 @@
                              document.getElementById("users").style.display = "none";
                          }
                     }
-                    
+
                     </script>
 			<div class="container" style="display:none;" id="users">
 				<!-- SIGN UP FORM -->
@@ -109,7 +109,7 @@
 
 
 
-	
+
 
 			</div>
                                 <!-- END SIGN IN FORM -->
@@ -137,7 +137,7 @@
 					</div>
                                     </div>
                                 <!-- END Remove user FORM -->
-                                
+
                                            <!--  Update user FORM -->
                                            <div class="well well-form-wrapper">
 					<p class="lead">Update User</p>
@@ -222,16 +222,16 @@
 							</div>
                                                         </div>
 
-                                             
+
 
                                              </form>
 					</div>
                                     </div>
                                 </div>
                                 <!-- END update user  FORM -->
-                                
-                                
-                                
+
+
+
                                 			<div class="container" style="display:none" id="publications">
 				<!-- publication add FORM -->
 				<div class="well well-form-wrapper col-sm-6 ">
@@ -265,7 +265,7 @@
 							<div class="col-sm-9">
 								<input type="text" class="form-control" id="year"
 									name="year"><br>
-                                                                
+
 							</div>
                                                         </div>
 
@@ -293,7 +293,7 @@
 									name="publisher">
 							</div>
 						</div>
-                                                    
+
                                                                          <div class="form-group">
 							<label for="signin-password" class="col-sm-2  control-label">issue*</label>
 							<div class="col-sm-9">
@@ -301,7 +301,7 @@
 									name="issue">
 							</div>
 						</div>
-                                                    
+
                                                                          <div class="form-group">
 							<label for="signin-password" class="col-sm-2  control-label">volume*</label>
 							<div class="col-sm-9">
@@ -309,7 +309,7 @@
 									name="volume">
 							</div>
 						</div>
-                                                    
+
                                                                                                     <div class="form-group">
 							<label for="signin-password" class="col-sm-2  control-label">category*</label>
 							<div class="col-sm-9">
@@ -318,7 +318,7 @@
 							</div>
                                                         <p id="wrongcategory" class="" style="display:none;"></p>
 						</div>
-                                                    
+
                                                                                                     <div class="form-group">
 							<label for="signin-password" class="col-sm-2  control-label">indexing*</label>
 							<div class="col-sm-9">
@@ -326,7 +326,7 @@
 									name="indexing">
 							</div>
 						</div>
-                                                                                                        
+
                                                          <div class="form-group">
 							<label for="signin-password" class="col-sm-2  control-label">booktitle*</label>
 							<div class="col-sm-9">
@@ -334,8 +334,8 @@
 									name="booktitle">
 							</div>
 						</div>
-                                                    
-                                                                                                        
+
+
                                                         <div class="form-group">
 							<label for="signin-password" class="col-sm-2  control-label">hlink*</label>
 							<div class="col-sm-9">
@@ -343,8 +343,8 @@
 									name="hlink">
 							</div>
 						</div>
-                                                    
-                                                 
+
+
                                                  <button type="button" class="btn btn-primary btn-lg center-block" onclick="addPublicationRequest()"><i class="fa fa-sign-in"></i> Add</button>
                                                  <br><p id="publicationadded" class=""> </p>
 
@@ -353,7 +353,7 @@
 
                                              </form>
 					</div>
-                                           
+
 			</div>
                                  <!-- publication add FORM END -->
                                        <!-- Remove publication FORM -->
@@ -378,11 +378,11 @@
                                              </form>
 					</div>
                                     </div>
-                              
+
                                        <!-- END publication remove FORM -->
-                                       
+
                                        <!--  publication update FORM -->
-                                      
+
                                          <div class="well well-form-wrapper">
 					<p class="lead">Update publication</p>
                                         <form class="form-horizontal label-left">
@@ -425,7 +425,7 @@
 							<div class="col-sm-9">
 								<input type="text" class="form-control" id="yearUp"
 									name="yearUp"><br>
-                                                                
+
 							</div>
                                                         </div>
 
@@ -453,7 +453,7 @@
 									name="publisherUp">
 							</div>
 						</div>
-                                                    
+
                                                                          <div class="form-group">
 							<label for="signin-password" class="col-sm-2  control-label">issue*</label>
 							<div class="col-sm-9">
@@ -461,7 +461,7 @@
 									name="issueUp">
 							</div>
 						</div>
-                                                    
+
                                                                          <div class="form-group">
 							<label for="signin-password" class="col-sm-2  control-label">volume*</label>
 							<div class="col-sm-9">
@@ -469,7 +469,7 @@
 									name="volumeUp">
 							</div>
 						</div>
-                                                    
+
                                                                                                     <div class="form-group">
 							<label for="signin-password" class="col-sm-2  control-label">category*</label>
 							<div class="col-sm-9">
@@ -479,7 +479,7 @@
                                                         <p id="wrongcategoryUp" class="" style="display:none;"></p>
                                                         <p class="note-check">  1:JOURNAL, 2:CONFERENCE, 3:BOOK, 4:BOOK CHAPTER, 5:WORKSHOP, 6:WORK IN PROGRESS. 7:DEMO, 8:POSTER</p>
 						</div>
-                                                    
+
                                                                                                     <div class="form-group">
 							<label for="signin-password" class="col-sm-2  control-label">indexing*</label>
 							<div class="col-sm-9">
@@ -487,7 +487,7 @@
 									name="indexingUp">
 							</div>
 						</div>
-                                                                                                        
+
                                                          <div class="form-group">
 							<label for="signin-password" class="col-sm-2  control-label">booktitle*</label>
 							<div class="col-sm-9">
@@ -495,8 +495,8 @@
 									name="booktitleUp">
 							</div>
 						</div>
-                                                    
-                                                                                                        
+
+
                                                         <div class="form-group">
 							<label for="signin-password" class="col-sm-2  control-label">hlink*</label>
 							<div class="col-sm-9">
@@ -508,21 +508,21 @@
                                                     <button type="button" class="btn btn-primary btn-lg center-block" onclick="updatePublicationRequest()"><i class="fa fa-recycle"></i> Update</button>
                                               <br><p id="updatepublication" class=""></p>
 						</div>
-                                             
+
                                               </div>
 
-                                            
+
 
                                              </form>
 					</div>
-                                       <!-- END publication update FORM -->           
+                                       <!-- END publication update FORM -->
 		</div>
             </div>
-                                
-                                
-                                
-                                
-                                                                
+
+
+
+
+
                                 			<div class="container" style="display:none" id="news">
 				<!-- News add FORM -->
 				<div class="well well-form-wrapper col-sm-6 ">
@@ -556,7 +556,7 @@
 							<div class="col-sm-9">
 								<input type="text" class="form-control" id="longDescriptionNews"
 									name="longDescriptionNews"><br>
-                                                                
+
 							</div>
                                                         </div>
 
@@ -575,7 +575,7 @@
 
                                                             <input  class="form-control" id="pictureNews1"
 									name="picturenews1">
-                                                           
+
                                                     </div>
 						</div>
 
@@ -586,7 +586,7 @@
 									name="picturenews2">
 							</div>
 						</div>
-                                                    
+
                                                                          <div class="form-group">
 							<label for="signin-password" class="col-sm-2  control-label">picture3*</label>
 							<div class="col-sm-9">
@@ -594,7 +594,7 @@
 									name="picturenews3">
 							</div>
 						</div>
-                                                    
+
                                                                          <div class="form-group">
 							<label for="signin-password" class="col-sm-2  control-label">picture4*</label>
 							<div class="col-sm-9">
@@ -602,8 +602,8 @@
 									name="picturenews4">
 							</div>
 						</div>
-                                                    
-                                       
+
+
                                                  <button type="button" class="btn btn-primary btn-lg center-block" onclick="addNews()"><i class="fa fa-sign-in"></i> Add</button>
                                                  <br><p id="newsAdd" class=""> </p>
 
@@ -612,9 +612,9 @@
 
                                              </form>
 					</div>
-                                    </div> 
-                                          
-			
+                                    </div>
+
+
                                  <!-- END News add FORM -->
                                        <!-- Remove News FORM -->
                                   <div class="col-sm-6 ">
@@ -638,11 +638,11 @@
                                              </form>
 					</div>
                                     </div>
-                               
+
                                        <!-- END News remove FORM -->
-                                       
+
                                        <!--  News update FORM -->
-                                      
+
                                          <div class="well well-form-wrapper">
 					<p class="lead">Update News</p>
                                         <form class="form-horizontal label-left">
@@ -685,7 +685,7 @@
 							<div class="col-sm-9">
 								<input type="text" class="form-control" id="longDescriptionNewsUp"
 									name="longDescriptionNewsUp"><br>
-                                                                
+
 							</div>
                                                         </div>
 
@@ -704,7 +704,7 @@
 
                                                             <input  class="form-control" id="pictureNewsUp1"
 									name="picturenewsUp1">
-                                                           
+
                                                     </div>
 						</div>
 
@@ -715,7 +715,7 @@
 									name="picturenewsUp2">
 							</div>
 						</div>
-                                                    
+
                                                                          <div class="form-group">
 							<label for="signin-password" class="col-sm-2  control-label">picture3*</label>
 							<div class="col-sm-9">
@@ -723,7 +723,7 @@
 									name="picturenewsUp3">
 							</div>
 						</div>
-                                                    
+
                                                                          <div class="form-group">
 							<label for="signin-password" class="col-sm-2  control-label">picture4*</label>
 							<div class="col-sm-9">
@@ -731,19 +731,19 @@
 									name="picturenewsUp4">
 							</div>
 						</div>
-                                                    
-                                                    
+
+
                                                    <button type="button" class="btn btn-primary btn-lg center-block" onclick="UpdateNewsRequest()"><i class="fa fa-recycle"></i> Update</button>
                                               <br><p id="updateNews" class=""></p>
-                             
+
 						</div>
                                               </div>
 
-                                             
+
 
                                              </form>
 					</div>
                                        </div>
-                                       <!-- END News update FORM -->           
+                                       <!-- END News update FORM -->
 		</div>
           </div>

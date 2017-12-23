@@ -22,13 +22,13 @@
 						</form>
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="http://edu.gaitech.hk">Gaitech EDU</a></li>
-                                                        <li><?php if (isset($_SESSION["username"])){
-							    echo '<a href="logout.php" class="as-button"><span class="btn btn-primary">Logout</span></a>';
-							}else {
-							    echo'<a href="login.php" class="as-button"><span class="btn btn-primary">Login</span></a>';
-							}
-							?></li>
-							
+              <?php if (isset($_SESSION["username"])) {
+										echo '<li><a href="dashboard.php" class="as-button"><span class="btn btn-primary">Dashboard <i class="fa fa-cog" aria-hidden="true"></i></span></a></li>';
+										echo '<li><a href="logout.php" class="as-button"><span class="btn btn-primary">Logout</span></a></li>';
+									} else {
+    								echo'<li><a href="login.php" class="as-button"><span class="btn btn-primary">Login</span></a></li>';
+								}?>
+
 						</ul>
 					</div>
 				</div>

@@ -15,7 +15,7 @@ if (isset($_GET['location'])) {
   $publisher = $_GET['publisher'];
   $rank = $_GET['rank'];
 
-  $sql = "UPDATE conference SET name='".$name."', location='".$location."', start_date='".$start_date."',end_date='".$end_date."',picture='".$picture."',description='".$description."',publisher='".$publisher."',rank='".$rank."' WHERE name='".$_SESSION["nameupdate"]."'";
+  $sql = "UPDATE conferences SET name='".$name."', location='".$location."', startDate='".$start_date."',endDate='".$end_date."',picture='".$picture."',description='".$description."',publisher='".$publisher."',rank='".$rank."' WHERE name='".$_SESSION["nameupdate"]."'";
   // echo $sql;
   echo "<response>";
   if (mysqli_query($conn, $sql)) {
@@ -40,7 +40,7 @@ if (isset($_GET['co-i'])) {
   $co_i = $_GET['co-i'];
   $total_budget = $_GET['total-budget'];
 
-  $sql = "UPDATE project SET name='".$name."', funding_agency='".$funding_agency."', start_date='".$start_date."', end_date='".$end_date."',picture='".$picture."',description='".$description."',pi='".$pi."',co_i='".$co_i."', total_budget=".$total_budget." WHERE name='".$_SESSION["nameupdate"]."'";
+  $sql = "UPDATE project SET name='".$name."', fundingAgency='".$funding_agency."', startDate='".$start_date."', endDate='".$end_date."',picture='".$picture."',description='".$description."',principleInvestigator='".$pi."',coinvestigators='".$co_i."', totalBudget=".$total_budget." WHERE name='".$_SESSION["nameupdate"]."'";
   // echo $sql;
 
   echo "<response>";
