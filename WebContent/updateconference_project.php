@@ -40,7 +40,7 @@ if (isset($_GET['co-i'])) {
   $co_i = $_GET['co-i'];
   $total_budget = $_GET['total-budget'];
 
-  $sql = "UPDATE project SET name='".$name."', fundingAgency='".$funding_agency."', startDate='".$start_date."', endDate='".$end_date."',picture='".$picture."',description='".$description."',principleInvestigator='".$pi."',coinvestigators='".$co_i."', totalBudget=".$total_budget." WHERE name='".$_SESSION["nameupdate"]."'";
+  $sql = "UPDATE projects SET name='".$name."', fundingAgency='".$funding_agency."', startDate='".$start_date."', endDate='".$end_date."',picture='".$picture."',description='".$description."',principleInvestigator='".$pi."',coinvestigators='".$co_i."', totalBudget=".$total_budget." WHERE name='".$_SESSION["nameupdate"]."'";
   // echo $sql;
 
   echo "<response>";
