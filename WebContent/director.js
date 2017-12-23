@@ -1,5 +1,5 @@
 function createAddForm() {
-  var type = document.getElementById("add").value;
+  var type = document.getElementById("addCP").value;
   var conference = document.getElementById('conferenceAddForm');
   var project = document.getElementById('projectAddForm');
   if (type == "conference") {
@@ -12,7 +12,7 @@ function createAddForm() {
 }
 
 function createRemoveForm() {
-  var type = document.getElementById("remove").value;
+  var type = document.getElementById("removeCP").value;
   var conference = document.getElementById('conferenceRemoveForm');
   var project = document.getElementById('projectRemoveForm');
   if (type == "conference") {
@@ -25,7 +25,7 @@ function createRemoveForm() {
 }
 
 function createUpdateForm() {
-  var type = document.getElementById("update").value;
+  var type = document.getElementById("updateCP").value;
   var conference = document.getElementById('conferenceUpdateForm');
   var project = document.getElementById('projectUpdateForm');
   if (type == "conference") {
@@ -73,8 +73,8 @@ function addCPRequest() {
       if (targetForm[0].value.localeCompare("") == 0 || targetForm[1].value.localeCompare("") == 0 || targetForm[2].value.localeCompare("") == 0 ||
         targetForm[3].value.localeCompare("") == 0 || targetForm[4].value.localeCompare("") == 0 || targetForm[5].value.localeCompare("") == 0 ||
         targetForm[6].value.localeCompare("") == 0 || targetForm[7].value.localeCompare("") == 0) {
-        document.getElementById("added").innerHTML = "Fill the required fields please";
-        document.getElementById("added").className = "alert alert alert-danger";
+        document.getElementById("addedc").innerHTML = "Fill the required fields please";
+        document.getElementById("addedc").className = "alert alert alert-danger";
       } else {
         xmlHttp.onreadystatechange = addCPResponse;
         xmlHttp.open("GET", "addconference_project.php?name=" + targetForm[0].value + "&location=" +
@@ -89,8 +89,8 @@ function addCPRequest() {
       if (targetForm[0].value.localeCompare("") == 0 || targetForm[1].value.localeCompare("") == 0 || targetForm[2].value.localeCompare("") == 0 ||
         targetForm[3].value.localeCompare("") == 0 || targetForm[4].value.localeCompare("") == 0 || targetForm[5].value.localeCompare("") == 0 ||
         targetForm[6].value.localeCompare("") == 0 || targetForm[7].value.localeCompare("") == 0 || targetForm[8].value.localeCompare("") == 0) {
-        document.getElementById("added2").innerHTML = "Fill the required fields please";
-        document.getElementById("added2").className = "alert alert alert-danger";
+        document.getElementById("addedc2").innerHTML = "Fill the required fields please";
+        document.getElementById("addedc2").className = "alert alert alert-danger";
       } else {
         xmlHttp.onreadystatechange = addCPResponse;
         xmlHttp.open("GET", "addconference_project.php?name=" + targetForm[0].value + "&funding-agency=" +
@@ -113,33 +113,33 @@ function addCPResponse() {
     if (document.getElementById("conferenceAddForm").style.display == "block") {
       if (response.childNodes[1].childNodes[0].nodeValue == 1) {
 
-        document.getElementById("added").style.display = "block";
-        document.getElementById("added").innerHTML = response.childNodes[0].childNodes[0].nodeValue;
-        document.getElementById("added").className = "alert alert alert-success";
-        document.getElementById("used").style.display = "none";
+
+        document.getElementById("addedc").innerHTML = response.childNodes[0].childNodes[0].nodeValue;
+        document.getElementById("addedc").className = "alert alert alert-success";
+
 
       } else {
 
-        document.getElementById("used").style.display = "block";
-        document.getElementById("used").innerHTML = response.childNodes[0].childNodes[0].nodeValue;
-        document.getElementById("used").className = "alert alert alert-danger";
-        document.getElementById("added").style.display = "none";
+
+        document.getElementById("addedc").innerHTML = response.childNodes[0].childNodes[0].nodeValue;
+        document.getElementById("addedc").className = "alert alert alert-danger";
+
 
       }
     } else if (document.getElementById("projectAddForm").style.display == "block") {
       if (response.childNodes[1].childNodes[0].nodeValue == 1) {
 
-        document.getElementById("added2").style.display = "block";
-        document.getElementById("added2").innerHTML = response.childNodes[0].childNodes[0].nodeValue;
-        document.getElementById("added2").className = "alert alert alert-success";
-        document.getElementById("used2").style.display = "none";
+
+        document.getElementById("addedc2").innerHTML = response.childNodes[0].childNodes[0].nodeValue;
+        document.getElementById("addedc2").className = "alert alert alert-success";
+
 
       } else {
 
-        document.getElementById("used2").style.display = "block";
-        document.getElementById("used2").innerHTML = response.childNodes[0].childNodes[0].nodeValue;
-        document.getElementById("used2").className = "alert alert alert-danger";
-        document.getElementById("added2").style.display = "none";
+
+        document.getElementById("addedc2").innerHTML = response.childNodes[0].childNodes[0].nodeValue;
+        document.getElementById("addedc2").className = "alert alert alert-danger";
+
 
       }
     }
@@ -158,7 +158,7 @@ function removeCPRequest() {
         document.getElementById("removed").className = "alert alert alert-danger";
       } else {
         xmlHttp.onreadystatechange = removeCPResponse;
-        mlHttp.open("GET", "removeconference_project.php?name=" + input.value + "&type=conference");
+        xmlHttp.open("GET", "removeconference_project.php?name=" + input.value + "&type=conference");
         xmlHttp.send();
       }
 

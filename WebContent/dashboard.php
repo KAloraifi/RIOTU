@@ -43,6 +43,7 @@ include_once 'include/headers_links.php';
 		<!-- PAGE CONTENT -->
 		<div class="page-content"> <?php if($_SESSION["role"] == "admin"){
                     include 'admin.php';
+                    include 'director.php';
                 }
 
                     elseif($_SESSION["role"] == "director" || $_SESSION["role"] == "senior member") {
@@ -70,6 +71,12 @@ include_once 'include/headers_links.php';
 	<script src="theme/assets/js/bootstrap.min.js"></script>
 	<script src="theme/assets/js/plugins/easing/jquery.easing.min.js"></script>
 	<script src="theme/assets/js/bravana.js"></script>
+
+  <script src="admin.js"></script>
+  <script src="update.js"></script>
+  <script src="director.js"></script>
+  <script src="Publication.js"></script>
+  <script src="news.js"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
