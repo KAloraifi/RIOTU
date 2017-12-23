@@ -31,7 +31,7 @@ include "include/dbconfig2.php";
         $password = $_GET["password"];
         
         $sql = "select * from users where username = '" . $username . "' and password = '" . $password . "'";
-         echo $sql;
+         //echo $sql;
         
         $result = $conn->query($sql);
         
@@ -43,7 +43,11 @@ include "include/dbconfig2.php";
             $_SESSION["firstname"] = $row["firstname"];
             $_SESSION["lastname"] = $row["lastname"];
             $_SESSION["role"] = $row["role"];
-            header('location: dashboard.php');
+            if ($row["role"]=="admin")
+            header('location: AdminDashboard.php');
+            else             
+                header('location: dashboard.php');
+
         } else {
             echo "<p> Incorrect username and/or password";
         }
