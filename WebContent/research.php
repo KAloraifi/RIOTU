@@ -15,7 +15,7 @@
     ?>
 </head>
 
-<body>
+<body onload="navigation()">
 	<!-- WRAPPER -->
 	<div id="wrapper">
 	<?php include_once 'include/nav_bar.php';?>
@@ -27,7 +27,7 @@
 				<ol class="breadcrumb link-accent">
 					<li><a href="index.php">Home</a></li>
 
-					<li class="active">Has Navigation Links</li>
+					<li class="active"></li>
 				</ol>
 			</div>
 		</div>
@@ -38,7 +38,7 @@
 				<p></p>
 
 				<h2 class="section-heading">RESEARCH AREAS</h2>
-				
+
 
 				<div class="paragraph_large">
 					The <strong>Robotics and Internet-of-Things</strong> research lab focuses on the
@@ -65,16 +65,16 @@
 				</div>
 				<br>
 				<h2 class="section-heading">CONSULTATION SERVICES</h2>
-				
+
 <div class="paragraph_large">
-					The <strong>Robotics and Internet-of-Things</strong> provides consultation services to industry, academia and government institutions to develop real-world solutions around our research areas. 
+					The <strong>Robotics and Internet-of-Things</strong> provides consultation services to industry, academia and government institutions to develop real-world solutions around our research areas.
 					We also provide training services on drones building, piloting and applications development, robots software development, Robot Operating System (ROS).
-					For further information, contact us.  
+					For further information, contact us.
 
 				</div>
 			</div>
-			
-			
+
+
 			<!--
 <div class="cta cta-solid-bg cta-2-columns margin-top-50">
 <div class="container">

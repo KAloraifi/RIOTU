@@ -38,3 +38,4 @@ session_start();
 <link rel="apple-touch-icon-precomposed"
 	href="theme/assets/ico/bravana57.png">
 <link rel="shortcut icon" href="theme/assets/ico/favicon.ico">
+<script src="navigation.js"></script>

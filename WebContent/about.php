@@ -13,7 +13,7 @@ include_once 'include/headers_links.php';
 ?>
 </head>
 
-<body>
+<body onload="navigation()">
 	<!-- WRAPPER -->
 	<div id="wrapper">
 	<?php
@@ -23,7 +23,7 @@ include_once 'include/headers_links.php';
 		<!-- PAGE HEADER DEFAULT -->
 		<div class="page-header">
 			<div class="container">
-				<h1 class="page-title pull-left">ABOUT</h1>
+				<h1 class="page-title pull-left">About</h1>
 				<ol class="breadcrumb link-accent">
 					<li><a href="index.php">Home</a></li>
 
@@ -36,7 +36,7 @@ include_once 'include/headers_links.php';
 		<div class="page-content no-margin-bottom">
 			<div class="container">
 				<a href='#'><img src="images/lab04.jpg" width="70%"
-					class="image-responsive center"> </a> <br> <br> <br> 
+					class="image-responsive center"> </a> <br> <br> <br>
 				<p class="paragraph_large">One of the initiatives of the National
 					Transformation Program is coming up with a Low Cost Communication
 					Network for the Internet of Things (IoT) applications. IoT

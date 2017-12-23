@@ -15,7 +15,7 @@ include_once 'include/utils.php';
 ?>
 </head>
 
-<body>
+<body onload="navigation()">
 	<!-- WRAPPER -->
 	<div id="wrapper">
 	<?php
@@ -29,7 +29,7 @@ include_once 'include/utils.php';
 				<ol class="breadcrumb link-accent">
 					<li><a href="index.php">Home</a></li>
 
-					<li class="active">Has Navigation Links</li>
+					<li class="active"></li>
 				</ol>
 			</div>
 		</div>
@@ -69,7 +69,7 @@ include_once 'include/utils.php';
 						<div class="item">
 							<img src="images/lab/3drsolo.jpg" alt="New York">
 						</div>
-						
+
 						<div class="item">
 							<img src="images/lab/rpi.jpg" alt="New York">
 						</div>
@@ -82,7 +82,7 @@ include_once 'include/utils.php';
 						<div class="item">
 							<img src="images/lab/cluster2.jpg" alt="New York">
 						</div>
-						
+
 						<div class="item">
 							<img src="images/lab/drones.jpg" alt="Chicago">
 						</div>

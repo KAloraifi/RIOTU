@@ -15,7 +15,7 @@
     ?>
 </head>
 
-<body>
+<body onload="navigation()">
 <!-- WRAPPER -->
 <div id="wrapper">
 <?php
@@ -25,7 +25,7 @@
 <!-- PAGE HEADER DEFAULT -->
 <div class="page-header">
 <div class="container">
-<h1 class="page-title pull-left">News</h1>
+<h1 class="page-title pull-left">Collaboration</h1>
 <ol class="breadcrumb link-accent">
 <li><a href="index.php">Home</a></li>
 

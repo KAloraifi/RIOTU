@@ -13,12 +13,12 @@
     include_once 'include/utils.php';
     ?>
 </head>
- 
+
 <body>
 	<!-- WRAPPER -->
 	<div id="wrapper">
 	<?php
-	include 'include/dbconfig.php';
+	include 'include/dbconfig2.php';
 	//session_start();
 	?>
 
@@ -26,7 +26,7 @@
 	include_once 'include/nav_bar.php';
 	?>
 		<!-- END NAVBAR -->
-		
+
 		<!-- PAGE CONTENT -->
 		<div class="page-content no-margin-bottom">
 			<div class="container">
@@ -34,21 +34,21 @@
 <h3 class='stale_gray'>Books</h3>
 
 				<?php
-				$sql = "SELECT * FROM publication, publication_category, publication_indexing where publication.category= 3 and publication.category = publication_category.id and publication.indexing = publication_indexing.id order by publication.year DESC, publication.month ASC";
+				$sql = "SELECT * FROM publication";
 //echo $sql;
 
-				$result = $dbconn->query($sql);
+				$result = $conn->query($sql);
 //echo $result->num_rows;
 				if ($result->num_rows >= 1) {
 					// output data of each row
 					while($row = $result->fetch_assoc()) {
 						echo'<div class="publication ">';
-						
+
 						$sql_authors = "SELECT firstname, lastname FROM author,publication,author_publication
-						WHERE author.aid=author_publication.author_id 
+						WHERE author.aid=author_publication.author_id
 						and publication.pid=author_publication.publication_id and publication.pid=".$row['pid'];
 						//echo $sql_authors;
-						$result_authors = $dbconn->query($sql_authors);
+						$result_authors = $conn->query($sql_authors);
 						$authors="";
 						while($row_author = $result_authors->fetch_assoc()){
 							$authors=$authors.''.$row_author["firstname"].' '.$row_author["lastname"].', ';
@@ -68,7 +68,7 @@
 
 				?>
 
-<br><br>			
+<br><br>
 <h3 class='stale_gray'>Journals</h3>
 
 				<?php
@@ -81,9 +81,9 @@
 					// output data of each row
 					while($row = $result->fetch_assoc()) {
 						echo'<div class="publication">';
-						
+
 						$sql_authors = "SELECT firstname, lastname FROM author,publication,author_publication
-						WHERE author.aid=author_publication.author_id 
+						WHERE author.aid=author_publication.author_id
 						and publication.pid=author_publication.publication_id and publication.pid=".$row['pid'];
 						//echo $sql_authors;
 						$result_authors = $dbconn->query($sql_authors);
@@ -118,9 +118,9 @@
 					// output data of each row
 					while($row = $result->fetch_assoc()) {
 						echo'<div class="publication ">';
-						
+
 						$sql_authors = "SELECT firstname, lastname FROM author,publication,author_publication
-						WHERE author.aid=author_publication.author_id 
+						WHERE author.aid=author_publication.author_id
 						and publication.pid=author_publication.publication_id and publication.pid=".$row['pid'];
 						//echo $sql_authors;
 						$result_authors = $dbconn->query($sql_authors);
@@ -156,9 +156,9 @@
 					// output data of each row
 					while($row = $result->fetch_assoc()) {
 						echo'<div class="publication ">';
-						
+
 						$sql_authors = "SELECT firstname, lastname FROM author,publication,author_publication
-						WHERE author.aid=author_publication.author_id 
+						WHERE author.aid=author_publication.author_id
 						and publication.pid=author_publication.publication_id and publication.pid=".$row['pid'];
 						//echo $sql_authors;
 						$result_authors = $dbconn->query($sql_authors);

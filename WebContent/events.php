@@ -15,7 +15,7 @@
     ?>
 </head>
 
-<body>
+<body onload="navigation()">
 	<!-- WRAPPER -->
 	<div id="wrapper">
 	<?php
@@ -63,12 +63,12 @@
 										remote control or using a ground station.</p>
 									<span class="post-meta"><i class="fa fa-calendar-o"></i> March
 										28-30, 2017</span> <a
-										href="http://wiki.coins-lab.org/trainings/drone/index.html"
+										href="training/gaitech-index.php"
 										class="read-more pull-right">Read More</a>
 								</div>
 							</div>
 						</div>
-						
+
 					</div>
 				</div>
 
