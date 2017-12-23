@@ -10,14 +10,14 @@
 <!-- CORE CSS -->
 <?php
 include_once 'include/headers_links.php';
-    
+
 ?>
-    
-    
-    
+
+
+
 </head>
 
-<body>
+<body onload="navigation()">
 	<!-- WRAPPER -->
 	<div id="wrapper">
 	<?php
@@ -31,24 +31,24 @@ include_once 'include/headers_links.php';
 				<ol class="breadcrumb link-accent">
 					<li><a href="index.php">Home</a></li>
 
-					<li class="active">Has Navigation Links</li>
+					<li class="active"></li>
 				</ol>
 			</div>
 		</div>
-        
-        
-        
-        <?php 
+
+
+
+        <?php
 include_once 'include/headers_links.php';
 include_once 'include/dashboardAdminLinks.php';
-        
-        
+
+
         include 'dashboardAdmin.php';
-        
+
         ?>
 		<!-- END PAGE HEADER DEFAULT -->
 		<!-- PAGE CONTENT -->
-		
+
 			<!--
 <div class="cta cta-solid-bg cta-2-columns margin-top-50">
 <div class="container">
@@ -79,10 +79,10 @@ include_once 'include/dashboardAdminLinks.php';
 
 
 </body>
-        <script src="theme/assets/js/jsTable/jquery.min.js"></script> 
-<script src="theme/assets/js/jsTable/jquery.uniform.js"></script> 
-<script src="theme/assets/js/jsTable/select2.min.js"></script> 
-<script src="theme/assets/js/jsTable/jquery.dataTables.min.js"></script> 
+        <script src="theme/assets/js/jsTable/jquery.min.js"></script>
+<script src="theme/assets/js/jsTable/jquery.uniform.js"></script>
+<script src="theme/assets/js/jsTable/select2.min.js"></script>
+<script src="theme/assets/js/jsTable/jquery.dataTables.min.js"></script>
 <script src="theme/assets/js/jsTable/maruti.tables.js"></script>
 
 </html>
