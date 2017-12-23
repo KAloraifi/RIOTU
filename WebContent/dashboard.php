@@ -29,7 +29,7 @@ include_once 'include/headers_links.php';
 		<!-- END NAVBAR -->
 		<!-- PAGE HEADER DEFAULT -->
 		<div class="page-header">
-                    
+
 			<div class="container">
 				<h1 class="page-title pull-left"><?php if(isset($_SESSION["firstname"]))echo "<p> Welcome " . $_SESSION["firstname"];  ?></h1>
 				<ol class="breadcrumb link-accent">
@@ -42,15 +42,15 @@ include_once 'include/headers_links.php';
 		<!-- END PAGE HEADER DEFAULT -->
 		<!-- PAGE CONTENT -->
 		<div class="page-content"> <?php if($_SESSION["role"] == "admin"){
-                    include 'admin1.php';
+                    include 'admin.php';
                 }
-                    
-                    elseif($_SESSION["role"] == "director" || $_SESSION["role"] == "senior-member") {
+
+                    elseif($_SESSION["role"] == "director" || $_SESSION["role"] == "senior member") {
                         include 'director.php';
-                        
+
                     }
                     ?>
-            
+
 </div>
 
 
