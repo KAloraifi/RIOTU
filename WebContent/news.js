@@ -37,7 +37,9 @@ function addNews(){
      var picture2 = document.getElementById("pictureNews2").value;
      var picture3 = document.getElementById("pictureNews3").value;
      var picture4 = document.getElementById("pictureNews4").value;
-    if ((title.localeCompare("") == 0) || (shortDescription.localeCompare("") == 0) || (longDescription.localeCompare("") == 0) || (date.localeCompare("") == 0)) {
+     var author = document.getElementById("authornews").value;
+     
+    if ((title.localeCompare("") == 0) || (shortDescription.localeCompare("") == 0) || (longDescription.localeCompare("") == 0) || (date.localeCompare("") == 0)|| (author.localeCompare("") == 0)) {
 
       document.getElementById("newsAdd").innerHTML = "Fill the required fields please";
       document.getElementById("newsAdd").className = "alert alert alert-danger";
@@ -47,9 +49,9 @@ function addNews(){
       xmlHttp.open("POST", "AddNews.php", true);
       xmlHttp.onreadystatechange = addNewsResponse;
       xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-      xmlHttp.send("title=" + title + "&shortDescription=" + shortDescription + "&longDescription=" + longDescription + "&date=" + date+"&picture1="+picture1+"&picture2="+picture2+"&picture3="+picture3+"&picture4="+picture4);
+      xmlHttp.send("title=" + title + "&shortDescription=" + shortDescription + "&longDescription=" + longDescription + "&date=" + date+"&picture1="+picture1+"&picture2="+picture2+"&picture3="+picture3+"&picture4="+picture4+"&author="+author);
       
-    
+   
       }
 }
 }
@@ -157,6 +159,7 @@ function DisplayNewsCallback(){
     document.getElementById("pictureNewsUp2").setAttribute("value", message.picture2);
     document.getElementById("pictureNewsUp3").setAttribute("value", message.picture3);
     document.getElementById("pictureNewsUp4").setAttribute("value", message.picture4);
+    document.getElementById("authornewsUp").setAttribute("value", message.author);
 
 
   } else {
@@ -182,7 +185,9 @@ function UpdateNewsRequest() {
      var picture2 = document.getElementById("pictureNewsUp2").value;
      var picture3 = document.getElementById("pictureNewsUp3").value;
      var picture4 = document.getElementById("pictureNewsUp4").value;
-    if ((title.localeCompare("") == 0) || (shortDescription.localeCompare("") == 0) || (longDescription.localeCompare("") == 0) || (date.localeCompare("") == 0)) {
+      var author = document.getElementById("authornewsUp").value;
+     
+    if ((title.localeCompare("") == 0) || (shortDescription.localeCompare("") == 0) || (longDescription.localeCompare("") == 0) || (date.localeCompare("") == 0)|| (author.localeCompare("") == 0)) {
 
       document.getElementById("updateNews").innerHTML = "Fill the required fields please";
       document.getElementById("updateNews").className = "alert alert alert-danger";
@@ -194,8 +199,8 @@ function UpdateNewsRequest() {
       xmlHttp.open("POST", "UpdateNews.php", true);
       xmlHttp.onreadystatechange = updateNewsCallback;
       xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-      xmlHttp.send("title=" + title + "&shortDescription=" + shortDescription + "&longDescription=" + longDescription + "&date=" + date + "&picture1=" + picture1 + "&picture2=" + picture2 + "&picture3=" + picture3+ "&picture4="+ picture4 );
-      
+      xmlHttp.send("title=" + title + "&shortDescription=" + shortDescription + "&longDescription=" + longDescription + "&date=" + date + "&picture1=" + picture1 + "&picture2=" + picture2 + "&picture3=" + picture3+ "&picture4="+ picture4+"&author="+author );
+     
     }
   }
 }

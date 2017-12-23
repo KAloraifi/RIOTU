@@ -11,12 +11,12 @@ $username = $_POST["username"];
 
 
 
-$sql = "select * from user where username = '" . $username."'";
+$sql = "select * from users where username = '" . $username."'";
  $result = $conn->query($sql);
         
         if ($result->num_rows == 1) {
             
-            $sql = "DELETE FROM user WHERE username = '".$username."'";
+            $sql = "DELETE FROM users WHERE username = '".$username."'";
 
 
 

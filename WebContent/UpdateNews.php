@@ -25,6 +25,7 @@ $sql = "select * from news where title = '" . $title."'";
                 $product->picture2 = $row["picture2"];
                 $product->picture3 = $row["picture3"];
                 $product->picture4 = $row["picture4"];
+                $product->author = $row["author"];
                 
 		
 		$product_json = json_encode($product);
@@ -47,6 +48,7 @@ $picture1 = $_POST["picture1"];
 $picture2 = $_POST["picture2"];
 $picture3 = $_POST["picture3"];
 $picture4 = $_POST["picture4"];
+$author=$_POST["author"];
 
 if($title != $_SESSION["titleNewsUpdate"]){
 $sql = "select * from news where title = '" . $title."'";
@@ -57,7 +59,7 @@ if ($result->num_rows == 1) {
     echo"<message>This title already exists.</message>";
     echo "<code>-1</code>";
 } else {
-    $sql = "UPDATE news SET title='".$title."',shortDescription='".$shortDescription."',longDescription='".$longDescription."',date='".$date."',picture1='".$picture1."',picture2='".$picture2."',picture3='".$picture3."',picture4='".$picture4."' WHERE title='".$_SESSION["titleNewsUpdate"]."';" ;
+    $sql = "UPDATE news SET title='".$title."',shortDescription='".$shortDescription."',longDescription='".$longDescription."',date='".$date."',picture1='".$picture1."',picture2='".$picture2."',picture3='".$picture3."',picture4='".$picture4."',author='".$author."' WHERE title='".$_SESSION["titleNewsUpdate"]."';" ;
 
  if (mysqli_query($conn, $sql)) {
     echo "<message>Record updated successfully</message>";
@@ -71,7 +73,7 @@ if ($result->num_rows == 1) {
 echo "</response>";
 }
 else{
-        $sql = "UPDATE news SET title='".$title."',shortDescription='".$shortDescription."',longDescription='".$longDescription."',date='".$date."',picture1='".$picture1."',picture2='".$picture2."',picture3='".$picture3."',picture4='".$picture4."' WHERE title='".$_SESSION["titleNewsUpdate"]."';" ;
+        $sql = "UPDATE news SET title='".$title."',shortDescription='".$shortDescription."',longDescription='".$longDescription."',date='".$date."',picture1='".$picture1."',picture2='".$picture2."',picture3='".$picture3."',picture4='".$picture4."',author='".$author."' WHERE title='".$_SESSION["titleNewsUpdate"]."';" ;
 echo "<response>";
  if (mysqli_query($conn, $sql)) {
     echo "<message>Record updated successfully</message>";

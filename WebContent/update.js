@@ -51,7 +51,7 @@ function DisplayCallback() {
     var xmlResponse = xmlHttp.responseText;
 
     var message = JSON.parse(xmlResponse);
-
+   
     document.getElementById("userUpdateForm").style.display = "block";
     document.getElementById("display").style.display = "none";
     document.getElementById("firstname_up").setAttribute("value", message.firstname);
@@ -61,8 +61,11 @@ function DisplayCallback() {
 
     document.getElementById("password_up").setAttribute("value", message.password);
     document.getElementById("role_up").setAttribute("value", message.role);
-    document.getElementById("birth_date_up").setAttribute("value", message.birth_date);
-    document.getElementById("join_date").setAttribute("value", message.join_date);
+    document.getElementById("birth_date_up").setAttribute("value", message.birthDate);
+    document.getElementById("contactUp").setAttribute("value", message.contact);
+    document.getElementById("join_date").setAttribute("value", message.joinDate);
+    
+   
     
 
   } else {
@@ -87,6 +90,7 @@ function UpdateRequest() {
 
     var password = document.getElementById("password_up").value;
     var role = document.getElementById("role_up").value;
+    var contact =document.getElementById("contactUp").value;
 
     if ((username.localeCompare("") == 0) || (firstname.localeCompare("") == 0) || (lastname.localeCompare("") == 0) || (password.localeCompare("") == 0) || (role.localeCompare("") == 0)) {
 
@@ -101,7 +105,7 @@ function UpdateRequest() {
       xmlHttp.open("POST", "updateuser.php", true);
       xmlHttp.onreadystatechange = UpdateCallback;
       xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-      xmlHttp.send("firstname=" + firstname + "&lastname=" + lastname + "&username=" + username + "&password=" + password + "&role=" + role + "&birth_date=" + birth_date + "&join_date=" + join_date);
+      xmlHttp.send("firstname=" + firstname + "&lastname=" + lastname + "&username=" + username + "&password=" + password + "&role=" + role + "&birth_date=" + birth_date + "&join_date=" + join_date+"&contact="+contact);
 
     }
   }
@@ -110,6 +114,7 @@ function UpdateRequest() {
 function UpdateCallback() {
       if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
     var xmlResponse = xmlHttp.responseXML;
+   
     var response = xmlResponse.getElementsByTagName("response")[0];
 
     if (response.childNodes[1].childNodes[0].nodeValue == 1) {

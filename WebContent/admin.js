@@ -42,11 +42,12 @@ function registerationRequest() {
     } else {
 
 
-      var birth_date = document.getElementById("birth_date").value;
+      var birthDate = document.getElementById("birth_date").value;
+      var contact = document.getElementById("contact").value;
       xmlHttp.open("POST", "adduser.php", true);
-      xmlHttp.onreadystatechange = RegisterationResponse;
+      xmlHttp.onreadystatechange = registerationResponse;
       xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-      xmlHttp.send("firstname=" + firstname + "&lastname=" + lastname + "&username=" + username + "&password=" + password + "&role=" + role + "&birth_date=" + birth_date);
+      xmlHttp.send("firstname=" + firstname + "&lastname=" + lastname + "&username=" + username + "&password=" + password + "&role=" + role + "&birthDate=" + birthDate+"&contact="+contact );
 
     }
   }
@@ -90,7 +91,7 @@ function registerationResponse() {
       } else {
 
         xmlHttp.open("POST", "removeuser.php", true);
-        xmlHttp.onreadystatechange = removeCallback;
+        xmlHttp.onreadystatechange = removeResponse;
         xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xmlHttp.send("username=" + username);
 

@@ -18,7 +18,7 @@ $category = $_POST["category"];
 $indexing = $_POST["indexing"];
 $booktitle = $_POST["booktitle"];
 $hlink = $_POST["hlink"];
-
+$author=$_POST["author"];
 
 //$title = $_GET["title"];
 //$impactfactor = $_GET["impactfactor"];
@@ -43,7 +43,7 @@ if ($result->num_rows == 1) {
     echo"<message>This publication title is already exists.</message>";
     echo "<code>-1</code>";
 } else {
-    $sql1="INSERT INTO publication (title, impactfactor, year, month, pages, publisher, issue, volume, category, indexing, booktitle, hlink) VALUES ('".$title."', '".$impactfactor."', '".$year."', '".$month."', '".$pages."', '".$publisher."', '".$issue."', '".$volume."', '".$category."', '".$indexing."', '" .$booktitle."', '".$hlink."')";
+    $sql1="INSERT INTO publication (title, impactfactor, year, month, pages, publisher, issue, volume, category, indexing, booktitle, hlink, author) VALUES ('".$title."', '".$impactfactor."', '".$year."', '".$month."', '".$pages."', '".$publisher."', '".$issue."', '".$volume."', '".$category."', '".$indexing."', '" .$booktitle."', '".$hlink."', '".$author."')";
     //echo $sql1;
     $conn->query($sql1);
     echo"<message>The publication ".$title." has been added.</message>";

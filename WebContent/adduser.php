@@ -9,9 +9,10 @@ $lastname = $_POST["lastname"];
 $username = $_POST["username"];
 $password = $_POST["password"];
 $role = $_POST["role"];
-$birth_date = $_POST["birth_date"];
+$birthDate = $_POST["birthDate"];
+$contact = $_POST["contact"];
 
-$sql = "select * from user where username = '" . $username."'";
+$sql = "select * from users where username = '" . $username."'";
 // echo $sql;
 
 $result = $conn->query($sql);
@@ -20,7 +21,7 @@ if ($result->num_rows == 1) {
     echo"<message>This username already exists.</message>";
     echo "<code>-1</code>";
 } else {
-    $sql1="INSERT INTO user (firstname, lastname, username, password, role, birth_date) VALUES ('".$firstname."', '".$lastname."', '".$username."', '".$password."', '".$role."', '".$birth_date."')";
+    $sql1="INSERT INTO users (firstname, lastname, username, password, role, birthDate, joinDate , contact) VALUES ('".$firstname."', '".$lastname."', '".$username."', '".$password."', '".$role."', '".$birthDate."', "."CURDATE()".", '".$contact."')";
     $conn->query($sql1);
     echo"<message>The username ".$username." has been added.</message>";
     echo "<code>1</code>";

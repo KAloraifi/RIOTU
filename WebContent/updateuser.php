@@ -10,7 +10,7 @@ $username = $_POST["username"];
 //this session used for the first searched username.
 $_SESSION["usernameupdate"]=$username;
 
-        $sql = "select * from user where username = '" . $username."'";
+        $sql = "select * from users where username = '" . $username."'";
         //echo $sql;
         
         $result = $conn->query($sql);
@@ -26,8 +26,9 @@ header('Content-Type: text/xml');
 		$product->username=$row["username"];
 		$product->password = $row["password"];
                 $product->role = $row["role"];
-                $product->birth_date = $row["birth_date"];
-                $product->join_date = $row["join_date"];
+                $product->birthDate = $row["birthDate"];
+                $product->joinDate = $row["joinDate"];
+                $product->contact = $row["contact"];
                 
 		
 		$product_json = json_encode($product);
@@ -48,15 +49,18 @@ $firstname = $_POST["firstname"];
 
 $lastname = $_POST["lastname"];
 
-
 $username = $_POST["username"];
 $password = $_POST["password"];
 $role = $_POST["role"];
 $birth_date = $_POST["birth_date"];
 $join_date = $_POST["join_date"];
+$contact = $_POST["contact"];
+
+
 
 if($username != $_SESSION["usernameupdate"]){
-$sql = "select * from user where username = '" . $username."'";
+$sql = "select * from users where username = '" . $username."'";
+
 
 $result = $conn->query($sql);
 if ($result->num_rows == 1) {
@@ -67,8 +71,9 @@ if ($result->num_rows == 1) {
 } 
 else {
     
-$sql = "UPDATE user SET firstname='".$firstname."',lastname='".$lastname."',username='".$username."',password='".$password."',birth_date='".$birth_date."' WHERE username='".$_SESSION["usernameupdate"]."';" ;
- echo "<response>";
+$sql = "UPDATE users SET firstname='".$firstname."',lastname='".$lastname."',username='".$username."',password='".$password."',birthDate='".$birth_date."',contact='".$contact."' WHERE username='".$_SESSION["usernameupdate"]."';" ;
+
+echo "<response>";
  if (mysqli_query($conn, $sql)) {
     echo "<message>Record updated successfully</message>";
      echo "<code>1</code>";
@@ -81,8 +86,9 @@ $sql = "UPDATE user SET firstname='".$firstname."',lastname='".$lastname."',user
 }
 
 else{
-    $sql = "UPDATE user SET firstname='".$firstname."',lastname='".$lastname."',username='".$username."',password='".$password."',birth_date='".$birth_date."' WHERE username='".$_SESSION["usernameupdate"]."';" ;
- echo "<response>";
+    $sql = "UPDATE users SET firstname='".$firstname."',lastname='".$lastname."',username='".$username."',password='".$password."',birthDate='".$birth_date."',contact='".$contact."' WHERE username='".$_SESSION["usernameupdate"]."';" ;
+ 
+    echo "<response>";
  if (mysqli_query($conn, $sql)) {
     echo "<message>Record updated successfully</message>";
      echo "<code>1</code>";
