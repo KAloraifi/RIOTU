@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 ?>
@@ -39,5 +38,3 @@ session_start();
 <link rel="apple-touch-icon-precomposed"
 	href="theme/assets/ico/bravana57.png">
 <link rel="shortcut icon" href="theme/assets/ico/favicon.ico">
-
-<link href="theme/assets/css/riot.css" rel="stylesheet" type="text/css">
