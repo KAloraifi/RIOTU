@@ -8,6 +8,9 @@
 <meta name="description" content="Responsive Website Template">
 <meta name="author" content="The Develovers">
 <!-- CORE CSS -->
+<script src="PublicationDashboard.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <?php
 include_once 'include/headers_links.php';
     

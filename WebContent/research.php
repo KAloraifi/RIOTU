@@ -41,35 +41,15 @@
 
 
 				<div class="paragraph_large">
-					The <strong>Robotics and Internet-of-Things</strong> research lab focuses on the
-					integration of robots into the Internet of Things to promote new
-					types of applications that leverage the use of these two
-					technologies. RIOT has a long expertise in developing solutions for
-					Internet-of-Things and Mobile Robots. The research lab also fosters its
-					activites to be aligned with national priorities in particular the
-					2020 National Transformation Plan and 2030 Vision. In particular,
-					with a strategic vision for the future, RIOT is working in emerging
-					topics such as:
-
-<br><br>
-
-					<ul>
-						<li>Software Engineering for Cloud Robotics</li>
-						<li>Big data analytics for IoT and Robotics applications</li>
-						<li>Security and safety of drones</li>
-						<li>Integration of robots/drones into the IoT and the Cloud</li>
-						<li>Communication and Networking for the IoT</li>
-						<li>AI Algorithms for Planning in Robotics</li>
-						<li>Design of Unmanned Aerial Vehicles (UAVs) and their applications</li>
-					</ul>
+				<?php $myfile = fopen("Text/RESEARCH AREAS main.txt", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("Text/RESEARCH AREAS main.txt"));?>
 				</div>
 				<br>
 				<h2 class="section-heading">CONSULTATION SERVICES</h2>
 
 <div class="paragraph_large">
-					The <strong>Robotics and Internet-of-Things</strong> provides consultation services to industry, academia and government institutions to develop real-world solutions around our research areas.
-					We also provide training services on drones building, piloting and applications development, robots software development, Robot Operating System (ROS).
-					For further information, contact us.
+					<?php $myfile = fopen("Text/CONSULTATION SERVICES.txt", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("Text/CONSULTATION SERVICES.txt"));?>
 
 				</div>
 			</div>

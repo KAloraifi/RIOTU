@@ -37,32 +37,20 @@ include_once 'include/headers_links.php';
 			<div class="container">
 				<a href='#'><img src="images/lab04.jpg" width="70%"
 					class="image-responsive center"> </a> <br> <br> <br>
-				<p class="paragraph_large">One of the initiatives of the National
-					Transformation Program is coming up with a Low Cost Communication
-					Network for the Internet of Things (IoT) applications. IoT
-					applications span several areas of the Saudi Vision, Health, Energy
-					Consumption, Security Monitoring, etc. These applications can be
-					also used in the concept of smart housing, smart campus, and smart
-					workplace. Establishing a professional research environment in the
-					Robotics and Internet of Things (IoT) will contribute to 2030
-					initiative. It will pursue and attract external research funds and
-					grants from industry and external research programs by providing
-					consultation service as well as developing IoT solutions and
-					providing training services for Saudi Market.</p>
+				<p class="paragraph_large"><?php $myfile = fopen("Text/inroduction.txt", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("Text/inroduction.txt"));?></p>
 
 				<h2 class="section-heading">VISION</h2>
-				<p class="paragraph_large">To be an internationally recognized
-					centre in robotics and internet of things</p>
+				<p class="paragraph_large"><?php $myfile = fopen("Text/VISION.txt", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("Text/VISION.txt"));?></p>
 
 				<h2 class="section-heading">MISSION</h2>
 
 				<ul class="paragraph_large">
-					<li>To promote applied research on Robotics and Internet of Things
-						in Prince Sultan University through international collaboration
-						with industrial and academic partners</li>
-					<li>To develop robotics and IoT solutions for real applications to
-						sustain the economic and social development in Saudi Arabia inline
-						with 2030 vision.</li>
+					<li><?php $myfile = fopen("Text/MISSION1.txt", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("Text/MISSION1.txt"));?></li>
+					<li><?php $myfile = fopen("Text/MISSION2.txt", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("Text/MISSION2.txt"));?></li>
 
 				</ul>
 
@@ -71,22 +59,22 @@ include_once 'include/headers_links.php';
 				<h2 class="section-heading">OBJECTIVES</h2>
 
 				<ul class="paragraph_large">
-					<li>Establish a professional research environment in PSU in the
-						robotics and IoT research.</li>
-					<li>Attract external funds and grants to PSU.</li>
-					<li>Provide a consultation service to the industry both locally and
-						internationally.</li>
-					<li>Develop robotics and IoT solution’s for the Saudi Market in
-						collaboration with international companies.</li>
-					<li>Providing training services to communities in the field of
-						robotics and IoT.</li>
-					<li>Contribute to the involvement of undergraduate and graduate
-						students in professional research and promote their intellectual
-						and learning skills.</li>
-					<li>Establish international collaboration with reputed research
-						groups and institutions in robotics and IoT.</li>
-					<li>Contribute to the enrichment of computer science and
-						engineering programs in the field of robotics and IoT</li>
+					<li><?php $myfile = fopen("Text/OBJECTIVES1.txt", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("Text/OBJECTIVES1.txt"));?></li>
+					<li><?php $myfile = fopen("Text/OBJECTIVES2.txt", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("Text/OBJECTIVES2.txt"));?></li>
+					<li><?php $myfile = fopen("Text/OBJECTIVES3.txt", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("Text/OBJECTIVES3.txt"));?></li>
+					<li><?php $myfile = fopen("Text/OBJECTIVES4.txt", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("Text/OBJECTIVES4.txt"));?></li>
+					<li><?php $myfile = fopen("Text/OBJECTIVES5.txt", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("Text/OBJECTIVES5.txt"));?></li>
+					<li><?php $myfile = fopen("Text/OBJECTIVES6.txt", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("Text/OBJECTIVES6.txt"));?></li>
+					<li><?php $myfile = fopen("Text/OBJECTIVES7.txt", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("Text/OBJECTIVES7.txt"));?></li>
+					<li><?php $myfile = fopen("Text/OBJECTIVES8.txt", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("Text/OBJECTIVES8.txt"));?></li>
 
 				</ul>
 

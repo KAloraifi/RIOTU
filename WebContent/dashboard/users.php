@@ -37,7 +37,9 @@ include 'include/dbconfig2.php';
                     
 				if ($result->num_rows > 0) {
 					// output data of each row
+                                    $count=1;
 					while($row = $result->fetch_assoc()) {
+                                            
 						$number_item+=1;
                         $username=$row["username"];
 						$firstName=$row["firstname"] ;
@@ -60,17 +62,20 @@ include 'include/dbconfig2.php';
                         
 						echo '
 							<td>'.$number_item.'</td>
-							<td>'.$username.'</td>
+							<td id="username'.$count.'">'.$username.'</td>
 							<td>'.$firstName.  " "  .$lastName.'</td>
 							<td>'.$role.'</td>
 							<td>'.$birthDate.'</td>
 							<td>'.$joinDate.'</td>
 							<td>'.$contact.'</td>
                             <td> 
-                                <a href="#" class="btn btn-primary btn-mini">Edit</a>
-                                <a href="#" class="btn btn-danger btn-mini">Delete</a>
+                                <a href="#" class="btn btn-primary btn-mini" onclick="">Edit</a>
+                                <a href="#" class="btn btn-danger btn-mini" onclick="removeRequest('.$count.')">Delete</a>
+                                 <a href="#" class="btn btn-danger btn-mini" id="r'.$count.'" onclick="">Save</a>
+
                             </td>
 						   </tr>';
+                                                $count++;
 
 					}
 				}

@@ -1,0 +1,3 @@
+The <strong>Robotics and Internet-of-Things</strong> provides consultation services to industry, academia and government institutions to develop real-world solutions around our research areas.
+					We also provide training services on drones building, piloting and applications development, robots software development, Robot Operating System (ROS).
+					For further information, contact us.

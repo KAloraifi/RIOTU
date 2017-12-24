@@ -17,6 +17,9 @@ include_once 'include/headers_links.php';
 <script src="director.js"></script>
 <script src="Publication.js"></script>
 <script src="news.js"></script>
+<script src="PublicationUser.js"></script>
+<script src="NewsUser.js"></script>
+
 </head>
 
 <body>
@@ -42,13 +45,16 @@ include_once 'include/headers_links.php';
 		<!-- END PAGE HEADER DEFAULT -->
 		<!-- PAGE CONTENT -->
 		<div class="page-content"> <?php if($_SESSION["role"] == "admin"){
-                    include 'admin.php';
+                    include 'admin1.php';
                     include 'director.php';
                 }
 
                     elseif($_SESSION["role"] == "director" || $_SESSION["role"] == "senior member") {
                         include 'director.php';
 
+                    }
+                    else{
+                        include 'User.php';
                     }
                     ?>
 

@@ -176,7 +176,7 @@ function displayPublicationUser(){
 
     } else {
 
-      xmlHttp.open("POST", "UpdatePublication.php", true);
+      xmlHttp.open("POST", "PublicationUpdateUser.php", true);
       xmlHttp.onreadystatechange = DisplayPublicationUserCallback;
       xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xmlHttp.send("title=" + title);
@@ -277,7 +277,7 @@ if( (category.localeCompare("") == 0) || category==null){
         
       else{
     
-      xmlHttp.open("POST", "UpdatePublication.php", true);
+      xmlHttp.open("POST", "PublicationUpdateUser.php", true);
       xmlHttp.onreadystatechange = updatePublicationUserResponse;
       xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xmlHttp.send("title=" + title + "&impactfactor=" + impactfactor + "&year=" + year + "&month=" + month + "&pages=" + pages + "&publisher=" + publisher+ "&issue=" + issue+ "&volume=" + volume+ "&category=" + category + "&indexing=" + indexing  + "&booktitle=" + booktitle + "&hlink=" + hlink+"&author="+author );
@@ -290,7 +290,6 @@ if( (category.localeCompare("") == 0) || category==null){
 function updatePublicationUserResponse(){
           if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
     var xmlResponse = xmlHttp.responseXML;
-    alert(xmlHttp.responseText);
    
     var response = xmlResponse.getElementsByTagName("response")[0];
 

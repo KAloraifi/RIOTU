@@ -59,6 +59,7 @@ function registerationResponse() {
 
   if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
     var xmlResponse = xmlHttp.responseXML;
+   
     var response = xmlResponse.getElementsByTagName("response")[0];
 
     if (response.childNodes[1].childNodes[0].nodeValue == 1) {
@@ -79,23 +80,26 @@ function registerationResponse() {
   }
 }
 
-  function removeRequest() {
+  function removeRequest(op) {
+
+
 
     if (xmlHttp.readyState == 0 || xmlHttp.readyState == 4) {
-      var username = document.getElementById("usernameremove").value;
+      var username = document.getElementById("username"+id).innerHTML;
 
-      if (username.localeCompare("") == 0) {
-        document.getElementById("remove").innerHTML = "Fill the username field please";
-        document.getElementById("remove").className = "alert alert alert-danger";
-
-      } else {
+//      if (username.localeCompare("") == 0) {
+//        document.getElementById("remove").innerHTML = "Fill the username field please";
+//        document.getElementById("remove").className = "alert alert alert-danger";
+//
+//      } else {
 
         xmlHttp.open("POST", "removeuser.php", true);
         xmlHttp.onreadystatechange = removeResponse;
         xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xmlHttp.send("username=" + username);
+       document.getElementById("r"+op).style.display="block";
 
-      }
+      //}
 
     }
   }
@@ -104,14 +108,16 @@ function registerationResponse() {
     if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
         var xmlResponse = xmlHttp.responseXML;
         var message = xmlResponse.getElementsByTagName("message")[0].childNodes[0].nodeValue;
+        alert(message);
         
-        if (message.localeCompare("Record deleted successfully") == 0) {
-          document.getElementById("remove").innerHTML = message;
-          document.getElementById("remove").className = "alert alert alert-success";
 
-        } else {
-          document.getElementById("remove").innerHTML = message;
-          document.getElementById("remove").className = "alert alert alert-danger";
-        }
+//        if (message.localeCompare("Record deleted successfully") == 0) {
+//          document.getElementById("remove").innerHTML = message;
+//          document.getElementById("remove").className = "alert alert alert-success";
+//
+//        } else {
+//          document.getElementById("remove").innerHTML = message;
+//          document.getElementById("remove").className = "alert alert alert-danger";
+//        }
     }
   }
