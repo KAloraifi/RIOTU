@@ -7,7 +7,7 @@ if(!isset($_POST["publisher"]) && isset($_POST["title"])){
 //this session used for the first searched username.
 $_SESSION["titleupdate"]=$title;
 
-$sql = "select * from publication where title = '" . $title."'";
+$sql = "select * from publication where title = '" . $title."' and author='".$_SESSION["firstname"].$_SESSION["lastname"]."'";
 
         $result = $conn->query($sql);
         
@@ -40,7 +40,7 @@ header('Content-Type: text/xml');
         else{
                        header('Content-Type: text/xml');
            echo ('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>');
-            echo"<message>This UserName does not exsit</message>";
+            echo"<message>This Title does not exsit or you are not authorized to update it.</message>";
         }
 }
 else{
@@ -52,7 +52,7 @@ $year = $_POST["year"];
 $month = $_POST["month"];
 $pages = $_POST["pages"];
 $publisher = $_POST["publisher"];
-//
+
 $issue = $_POST["issue"];
 $volume = $_POST["volume"];
 $category = $_POST["category"];

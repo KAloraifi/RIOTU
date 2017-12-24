@@ -57,7 +57,7 @@ function addNewsUser(){
 function  addNewsResponseUser(){
       if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
     var xmlResponse = xmlHttp.responseXML;
-   alert(xmlHttp.responseText);
+  
     var response = xmlResponse.getElementsByTagName("response")[0];
 
     if (response.childNodes[1].childNodes[0].nodeValue == 1) {
@@ -88,7 +88,7 @@ function removeNewsRequestUser(){
 
       } else {
 
-        xmlHttp.open("POST", "RemoveNews.php", true);
+        xmlHttp.open("POST", "RemoveNewsUser.php", true);
         xmlHttp.onreadystatechange = removeNewsCallbackUser;
         xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xmlHttp.send("title=" + title); 
@@ -126,7 +126,7 @@ function newsDisplayUser(){
 
     } else {
 
-      xmlHttp.open("POST", "UpdateNews.php", true);
+      xmlHttp.open("POST", "UpdateNewsUser.php", true);
       xmlHttp.onreadystatechange = DisplayNewsCallbackUser;
       xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xmlHttp.send("title=" + title);
@@ -193,7 +193,7 @@ function UpdateNewsRequestUser() {
 
 
       
-      xmlHttp.open("POST", "UpdateNews.php", true);
+      xmlHttp.open("POST", "UpdateNewsUser.php", true);
       xmlHttp.onreadystatechange = updateNewsCallbackUser;
       xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xmlHttp.send("title=" + title + "&shortDescription=" + shortDescription + "&longDescription=" + longDescription + "&date=" + date + "&picture1=" + picture1 + "&picture2=" + picture2 + "&picture3=" + picture3+ "&picture4="+ picture4+"&author="+author);

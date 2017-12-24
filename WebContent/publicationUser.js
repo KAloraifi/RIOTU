@@ -105,7 +105,7 @@ function addPublicationUserRequest() {
 function addPublicationUserResponse(){
       if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
     var xmlResponse = xmlHttp.responseXML;
-    alert(xmlHttp.responseText);
+   
     var response = xmlResponse.getElementsByTagName("response")[0];
 
     if (response.childNodes[1].childNodes[0].nodeValue == 1) {
@@ -139,7 +139,7 @@ function removePublicationUserRequest(){
 
       } else {
 
-        xmlHttp.open("POST", "removepublication.php", true);
+        xmlHttp.open("POST", "removepublicationUser.php", true);
         xmlHttp.onreadystatechange = publicationRemoveUserCallback;
         xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xmlHttp.send("title=" + title);

@@ -8,7 +8,7 @@ $title = $_POST["title"];
 
 $_SESSION["titleNewsUpdate"]=$title;
 
-$sql = "select * from news where title = '".$title."'";
+$sql = "select * from news where title = '" . $title."' and author='".$_SESSION["firstname"].$_SESSION["lastname"]."'";
 
         $result = $conn->query($sql);
         
@@ -33,7 +33,7 @@ $sql = "select * from news where title = '".$title."'";
         }      else{ 
            header('Content-Type: text/xml');
            echo ('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>');
-            echo"<message>This News does not exsit</message>";
+            echo"<message>This News does not exsit or you are not authrized to update it</message>";
         }
 }else{
     
