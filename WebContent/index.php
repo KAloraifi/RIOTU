@@ -51,10 +51,8 @@ include_once 'include/headers_links.php';
 						data-hoffset="0" data-voffset="[150, 170, 180, 200]"
 						data-transform_in="o:0;y:50;s:2000;" data-transform_idle="o:1;"
 						data-transform_out="o:0;y:0;s:1500;e:Power3.easeInOut;"
-						data-start="1900" style="margin-top: 100px"
-						onclick="alert('coming soon');">
-						<a href="#" class="btn btn-primary btn-lg"><i
-							class="fa fa-shopping-cart"></i> REGISTER NOW</a>
+						data-start="1900" style="margin-top: 100px">
+						<a href="training/gaitech-index.php" class="btn btn-primary btn-lg">REGISTER NOW</a>
 					</div></li>
 				<li data-transition="crossfade"><img
 					src="images/profile-background-psu.jpg" data-bgfit="cover"
@@ -84,8 +82,7 @@ include_once 'include/headers_links.php';
 						data-hoffset="0" data-voffset="[150, 170, 180, 200]"
 						data-transform_in="o:0;y:50;s:2000;" data-transform_idle="o:1;"
 						data-transform_out="o:0;y:0;s:1500;e:Power3.easeInOut;"
-						data-start="1900" style="margin-top: 100px"
-						onclick="alert('coming soon');">
+						data-start="1900" style="margin-top: 100px">
 						<a href="http://www.springer.com/us/book/9783319549262"
 							class="btn btn-primary btn-lg"><i class="fa fa-shopping-cart"></i>
 							PURCHASE</a>
@@ -236,21 +233,21 @@ outsourcing through an expanded array of functionalities.</p>
 									<div class="col-lg-6 col-md-6 col-sm-12 col-xm-12 banner_news">
 									<h4>New Grant Attracted</h4>
 										<p>
-											<a href='#'>Nov 1, 2017</a> The RIOTU Lab would like to thank <a href="http://www.gaitech.com/">Gaitech Robotics (China)</a> for the research grant provided to the lab, in the context of R&D collaboration MoU established between Prince Sultan University and Gaitech Robotics. 
+											<a href='#'>Nov 1, 2017</a> The RIOTU Lab would like to thank <a href="http://www.gaitech.com/">Gaitech Robotics (China)</a> for the research grant provided to the lab, in the context of R&D collaboration MoU established between Prince Sultan University and Gaitech Robotics.
 										</p>
 										<br>
 									</div>
 									<div class="col-lg-6 col-md-6 col-sm-12 col-xm-12 banner_news">
 									<h4>Open Positions for Students</h4>
 										<p>
-											<a href='#'>Nov 1, 2017</a> The RIOTU Lab  is looking for talented and skilled students to join the research activities of the lab. 
-											We look for studengs with strong skills in programming and software development. Knowledge of drones, ROS, and Robotics will be an added value. 
+											<a href='#'>Nov 1, 2017</a> The RIOTU Lab  is looking for talented and skilled students to join the research activities of the lab.
+											We look for studengs with strong skills in programming and software development. Knowledge of drones, ROS, and Robotics will be an added value.
 										</p>
-										
+
 										<br>
 									</div>
-									
-									
+
+
 
 								</div>
 
