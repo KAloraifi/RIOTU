@@ -89,6 +89,14 @@
 					class="dropdown-toggle" data-toggle="dropdown">COLLABORATION </a></li>
 				<li class="dropdown "><a href="http://wiki.coins-lab.org"
 					class="dropdown-toggle" data-toggle="dropdown">WIKI </a></li>
+                
+                 <?php if (isset($_SESSION["username"])) {
+
+										echo '<li><a href="logout.php" class="as-button"><span class="btn btn-primary">Logout</span></a></li>';
+									} else {
+    								echo'<li><a href="login.php" class="as-button"><span class="btn btn-primary">Login</span></a></li>';
+								}?>
+
 
 
 
