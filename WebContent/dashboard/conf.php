@@ -11,6 +11,7 @@
 
 include 'include/dbconfig2.php';
 
+
 				$sql = "SELECT * FROM conferences ";
 				$result = $conn->query($sql);
 

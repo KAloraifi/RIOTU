@@ -1,5 +1,41 @@
 
-      <div class="container">
+     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+function showPreview(objFileInput) {
+    if (objFileInput.files[0]) {
+        var fileReader = new FileReader();
+        fileReader.onload = function (e) {
+            $("#targetLayer").html('<img src="'+e.target.result+'" width="200px" height="200px" class="upload-preview" />');
+			$("#targetLayer").css('opacity','0.7');
+			$(".icon-choose-image").css('opacity','0.5');
+        }
+		fileReader.readAsDataURL(objFileInput.files[0]);
+    }
+}
+
+$(document).ready(function (e) {
+	$("#uploadForm").on('submit',(function(e) {
+		e.preventDefault();
+		$.ajax({
+        	url: "upload.php",
+			type: "POST",
+			data:  new FormData(this),
+			beforeSend: function(){$("#body-overlay").show();},
+			contentType: false,
+    	    processData:false,
+			success: function(data)
+		    {
+			$("#targetLayer").html(data);
+			$("#targetLayer").css('opacity','1');
+			setInterval(function() {$("#body-overlay").hide(); },500);
+			},
+		  	error: function() 
+	    	{
+	    	} 	        
+	   });
+	}));
+});</script>
+<div class="container">
         <!-- ADD FORMS FOR CONFERENCE AND PROJECT -->
         <div class="container">
           <div class="well well-form-wrapper col-sm-6">
@@ -39,12 +75,7 @@
   								<input type="date" class="form-control cinput" name="end-date">
   							</div>
   						</div>
-              <div class="form-group">
-  							<label for="add-picture" class="col-sm-3 control-label">Picture Link*</label>
-  							<div class="col-sm-9">
-  								<input type="text" class="form-control cinput" name="picture">
-  							</div>
-  						</div>
+             
               <div class="form-group">
   							<label for="add-description" class="col-sm-3 control-label">Description*</label>
   							<div class="col-sm-9">
@@ -63,10 +94,28 @@
   								<input type="text" class="form-control cinput" name="rank">
   							</div>
   						</div>
+                                                        <div id="body-overlay"><div><img src="loading.gif" width="64px" height="64px"/></div></div>
 
-  						<button type="button" class="btn btn-primary btn-lg center-block" onclick="addCPRequest()"><i class="fa fa-plus"></i> ADD</button>
+						<button type="button" class="btn btn-primary btn-lg center-block" onclick="addCPRequest()"><i class="fa fa-plus"></i> ADD</button>
               <p id="addedc" class="">
+     
   					</form>
+            
+             <div class="bgColor">
+<form id="uploadForm" action="upload.php.php" method="post">
+<div id="targetOuter">
+	<div id="targetLayer"></div>
+	<img src="photo.png"  class="icon-choose-image" />
+	<div class="icon-choose-image" >
+	<input name="userImage" id="userImage" type="file" class="inputFile" onChange="showPreview(this);" />
+	</div>
+</div>
+<div>
+<input type="submit" value="Upload Photo" class="btnSubmit" />
+</form>
+</div>
+</div>
+        
 
             <!-- ADD FORM FOR PROJECT -->
             <form class="form-horizontal label-left" id="projectAddForm"

@@ -340,7 +340,7 @@
 							<label for="signin-password" class="col-sm-2  control-label">ShortDescription*</label>
 							<div class="col-sm-9">
 								<input  class="form-control" id="shortDescriptionNews"
-									name="shortDescriptionNews">
+									name="shortDescriptionNews" maxlength="99">
 							</div>
 						</div>
 
@@ -469,7 +469,7 @@
 							<label for="signin-password" class="col-sm-2  control-label">ShortDescription*</label>
 							<div class="col-sm-9">
 								<input  class="form-control" id="shortDescriptionNewsUp"
-									name="shortDescriptionNewsUp">
+									name="shortDescriptionNewsUp" maxlength="99">
 							</div>
 						</div>
 

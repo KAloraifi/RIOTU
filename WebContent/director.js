@@ -72,17 +72,18 @@ function addCPRequest() {
       targetForm = document.getElementsByClassName("cinput");
       if (targetForm[0].value.localeCompare("") == 0 || targetForm[1].value.localeCompare("") == 0 || targetForm[2].value.localeCompare("") == 0 ||
         targetForm[3].value.localeCompare("") == 0 || targetForm[4].value.localeCompare("") == 0 || targetForm[5].value.localeCompare("") == 0 ||
-        targetForm[6].value.localeCompare("") == 0 || targetForm[7].value.localeCompare("") == 0) {
+        targetForm[6].value.localeCompare("") == 0 ) {
         document.getElementById("addedc").innerHTML = "Fill the required fields please";
         document.getElementById("addedc").className = "alert alert alert-danger";
       } else {
         xmlHttp.onreadystatechange = addCPResponse;
         xmlHttp.open("GET", "addconference_project.php?name=" + targetForm[0].value + "&location=" +
           targetForm[1].value + "&start-date=" + targetForm[2].value + "&end-date=" + targetForm[3].value +
-          "&picture=" + targetForm[4].value + "&description=" + targetForm[5].value + "&publisher=" +
-          targetForm[6].value + "&rank=" + targetForm[7].value);
+            "&description=" + targetForm[4].value + "&publisher=" +
+          targetForm[5].value + "&rank=" + targetForm[6].value);
 
         xmlHttp.send();
+        alert("done");
       }
     } else if (document.getElementById("projectAddForm").style.display == "block") {
       targetForm = document.getElementsByClassName("pinput");
@@ -109,6 +110,7 @@ function addCPRequest() {
 function addCPResponse() {
   if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
     var xmlResponse = xmlHttp.responseXML;
+    alert(xmlHttp.responseText);
     var response = xmlResponse.getElementsByTagName("response")[0];
     if (document.getElementById("conferenceAddForm").style.display == "block") {
       if (response.childNodes[1].childNodes[0].nodeValue == 1) {

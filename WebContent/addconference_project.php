@@ -1,15 +1,19 @@
 <?php
+session_start();
 include "include/dbconfig2.php";
 header('Content-Type: text/xml');
 echo('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>');
 
+
 if (isset($_GET['location'])) {
+
+
 
   $name = $_GET['name'];
   $location = $_GET['location'];
   $start_date = $_GET['start-date'];
   $end_date = $_GET['end-date'];
-  $picture = $_GET['picture'];
+  
   $description = $_GET['description'];
   $publisher = $_GET['publisher'];
   $rank = $_GET['rank'];
@@ -23,7 +27,8 @@ if (isset($_GET['location'])) {
       echo"<message>This conference name already exists.</message>";
       echo "<code>-1</code>";
   } else {
-      $sql1="INSERT INTO conferences VALUES ('".$name."', '".$location."', '".$start_date."', '".$end_date."', '".$picture."', '".$description."', '".$publisher."', '".$rank."')";
+      $sql1="INSERT INTO conferences VALUES (null,'".$name."', '".$location."', '".$start_date."', '".$end_date."', '".$_SESSION["image"]."', '".$description."', '".$publisher."', '".$rank."')";
+      echo $sql1;
       $conn->query($sql1);
       echo"<message>The conference ".$name." has been added.</message>";
       echo "<code>1</code>";
@@ -52,7 +57,7 @@ if (isset($_GET['co-i'])) {
       echo"<message>This project name already exists.</message>";
       echo "<code>-1</code>";
   } else {
-      $sql1="INSERT INTO projects VALUES ('".$name."', '".$funding_agency."', '".$start_date."', '".$end_date."', '".$picture."', '".$description."', '".$pi."', '".$co_i."', ".$total_budget.")";
+      $sql1="INSERT INTO projects VALUES (null,'".$name."', '".$funding_agency."', '".$start_date."', '".$end_date."', '".$picture."', '".$description."', '".$pi."', '".$co_i."', ".$total_budget.")";
       $conn->query($sql1);
       echo"<message>The project ".$name." has been added.</message>";
       echo "<code>1</code>";
