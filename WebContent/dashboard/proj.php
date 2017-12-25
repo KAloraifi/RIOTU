@@ -35,6 +35,7 @@ include 'include/dbconfig2.php';
 				echo'<tbody id="InvoiceTableBody">';
 				$number_item=0;
 				if ($result->num_rows > 0) {
+                                    $count=1;
 					// output data of each row
 					while($row = $result->fetch_assoc()) {
 						$number_item+=1;
@@ -73,7 +74,7 @@ include 'include/dbconfig2.php';
                         
 						echo '
 							<td>'.$number_item.'</td>
-							<td>'.$name.'</td>
+							<td id="name'.$count.'">'.$name.'</td>
 							<td>'.$fundingAgency.'</td>
 							<td>'.$startDate.'</td>
 							<td>'.$endDate.'</td>
@@ -84,11 +85,11 @@ include 'include/dbconfig2.php';
 							<td>'.$totalBudget.'</td>
                             <td> 
                                 <a href="#" class="btn btn-primary btn-mini">Edit</a>
-                                <a href="#" class="btn btn-danger btn-mini">Delete</a>
+                                <a href="#" class="btn btn-danger btn-mini" onclick="removePRequest('.$count.')">Delete</a>
                             </td>
 						   </tr>';
 
-					}
+					 $count++;}
 				}
 				echo'</tbody>';
 				echo '</table>';

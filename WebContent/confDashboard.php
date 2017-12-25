@@ -13,7 +13,7 @@ include_once 'include/headers_links.php';
     
 ?>
     
-    
+<script src="con_proDashboard.js"></script>
     
 </head>
 

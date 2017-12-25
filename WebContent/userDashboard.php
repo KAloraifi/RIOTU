@@ -8,7 +8,7 @@
 <meta name="description" content="Responsive Website Template">
 <meta name="author" content="The Develovers">
 <!-- CORE CSS -->
-<script src="admin.js"></script>
+<script src="adminDashboard.js"></script>
 <?php
 include_once 'include/headers_links.php';
     

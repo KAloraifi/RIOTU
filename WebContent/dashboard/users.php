@@ -71,7 +71,6 @@ include 'include/dbconfig2.php';
                             <td> 
                                 <a href="#" class="btn btn-primary btn-mini" onclick="">Edit</a>
                                 <a href="#" class="btn btn-danger btn-mini" onclick="removeRequest('.$count.')">Delete</a>
-                                 <a href="#" class="btn btn-danger btn-mini" id="r'.$count.'" onclick="">Save</a>
 
                             </td>
 						   </tr>';

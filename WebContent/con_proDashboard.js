@@ -83,7 +83,7 @@ function addCPRequest() {
           targetForm[5].value + "&rank=" + targetForm[6].value);
 
         xmlHttp.send();
-        
+        alert("done");
       }
     } else if (document.getElementById("projectAddForm").style.display == "block") {
       targetForm = document.getElementsByClassName("pinput");
@@ -110,7 +110,7 @@ function addCPRequest() {
 function addCPResponse() {
   if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
     var xmlResponse = xmlHttp.responseXML;
-   
+    alert(xmlHttp.responseText);
     var response = xmlResponse.getElementsByTagName("response")[0];
     if (document.getElementById("conferenceAddForm").style.display == "block") {
       if (response.childNodes[1].childNodes[0].nodeValue == 1) {
@@ -148,61 +148,88 @@ function addCPResponse() {
   }
 }
 
-function removeCPRequest() {
+
+function removeCRequest(op) {
   if (xmlHttp.readyState == 0 || xmlHttp.readyState == 4) {
-    var input;
-
-    if (document.getElementById("conferenceRemoveForm").style.display == "block") {
-      input = document.getElementById("cname");
-
-      if (input.value.localeCompare("") == 0) {
-        document.getElementById("removed").innerHTML = "Fill the name field please";
-        document.getElementById("removed").className = "alert alert alert-danger";
-      } else {
-        xmlHttp.onreadystatechange = removeCPResponse;
-        xmlHttp.open("GET", "removeconference_project.php?name=" + input.value + "&type=conference");
+    var input = document.getElementById("name"+op).innerHTML;
+  
+//
+//    if (document.getElementById("conferenceRemoveForm").style.display == "block") {
+//      input = document.getElementById("cname");
+//
+//      if (input.value.localeCompare("") == 0) {
+//        document.getElementById("removed").innerHTML = "Fill the name field please";
+//        document.getElementById("removed").className = "alert alert alert-danger";
+//      } else {
+//        xmlHttp.onreadystatechange = removeCPResponse;
+//        xmlHttp.open("GET", "removeconference_project.php?name=" + input.value + "&type=conference");
+//        xmlHttp.send();
+//      }
+//
+//    } else if (document.getElementById("projectRemoveForm").style.display == "block") {
+//      input = document.getElementById("pname");
+//
+//      if (input.value.localeCompare("") == 0) {
+//        document.getElementById("removed2").innerHTML = "Fill the name field please";
+//        document.getElementById("removed2").className = "alert alert alert-danger";
+//      } else {
+        xmlHttp.onreadystatechange = removeCResponse;
+        xmlHttp.open("GET", "removeconference_project.php?name=" + input+ "&type=conference");
         xmlHttp.send();
-      }
-
-    } else if (document.getElementById("projectRemoveForm").style.display == "block") {
-      input = document.getElementById("pname");
-
-      if (input.value.localeCompare("") == 0) {
-        document.getElementById("removed2").innerHTML = "Fill the name field please";
-        document.getElementById("removed2").className = "alert alert alert-danger";
-      } else {
-        xmlHttp.onreadystatechange = removeCPResponse;
-        xmlHttp.open("GET", "removeconference_project.php?name=" + input.value + "&type=project");
-        xmlHttp.send();
+        document.getElementById("InvoiceTableBody").deleteRow(op-1);
       }
 
     }
-  }
-}
+ // }
+//}
 
-function removeCPResponse() {
+function removeCResponse() {
   if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
     var xmlResponse = xmlHttp.responseXML;
     var response = xmlResponse.getElementsByTagName("response")[0];
-    if (document.getElementById("conferenceRemoveForm").style.display == "block") {
-      if (response.childNodes[1].childNodes[0].nodeValue == 1) {
-        document.getElementById("removed").innerHTML = response.childNodes[0].childNodes[0].nodeValue;
-        document.getElementById("removed").className = "alert alert alert-success";
+  alert(response.childNodes[0].childNodes[0].nodeValue);
+  }
+}
 
-      } else {
-        document.getElementById("removed").innerHTML = response.childNodes[0].childNodes[0].nodeValue;
-        document.getElementById("removed").className = "alert alert alert-danger";
+function removePRequest(op) {
+  if (xmlHttp.readyState == 0 || xmlHttp.readyState == 4) {
+    var input = document.getElementById("name"+op).innerHTML;
+    alert(input);
+//
+//    if (document.getElementById("conferenceRemoveForm").style.display == "block") {
+//      input = document.getElementById("cname");
+//
+//      if (input.value.localeCompare("") == 0) {
+//        document.getElementById("removed").innerHTML = "Fill the name field please";
+//        document.getElementById("removed").className = "alert alert alert-danger";
+//      } else {
+//        xmlHttp.onreadystatechange = removeCPResponse;
+//        xmlHttp.open("GET", "removeconference_project.php?name=" + input.value + "&type=conference");
+//        xmlHttp.send();
+//      }
+//
+//    } else if (document.getElementById("projectRemoveForm").style.display == "block") {
+//      input = document.getElementById("pname");
+//
+//      if (input.value.localeCompare("") == 0) {
+//        document.getElementById("removed2").innerHTML = "Fill the name field please";
+//        document.getElementById("removed2").className = "alert alert alert-danger";
+//      } else {
+        xmlHttp.onreadystatechange = removePResponse;
+        xmlHttp.open("GET", "removeconference_project.php?name=" + input+ "&type=project");
+        xmlHttp.send();
+         document.getElementById("InvoiceTableBody").deleteRow(op-1);
       }
-    } else if (document.getElementById("projectRemoveForm").style.display == "block") {
-      if (response.childNodes[1].childNodes[0].nodeValue == 1) {
-        document.getElementById("removed2").innerHTML = response.childNodes[0].childNodes[0].nodeValue;
-        document.getElementById("removed2").className = "alert alert alert-success";
 
-      } else {
-        document.getElementById("removed2").innerHTML = response.childNodes[0].childNodes[0].nodeValue;
-        document.getElementById("removed2").className = "alert alert alert-danger";
-      }
     }
+ // }
+//}
+
+function removePResponse() {
+  if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+    var xmlResponse = xmlHttp.responseXML;
+    var response = xmlResponse.getElementsByTagName("response")[0];
+  alert(response.childNodes[0].childNodes[0].nodeValue);
   }
 }
 
@@ -372,3 +399,5 @@ function updateCPResponse() {
     }
   }
 }
+
+

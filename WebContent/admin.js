@@ -80,44 +80,39 @@ function registerationResponse() {
   }
 }
 
-  function removeRequest(op) {
+  function removeRequest() {
 
+   if (xmlHttp.readyState == 0 || xmlHttp.readyState == 4) {
+      var username = document.getElementById("usernameremove").value;
 
+      if (username.localeCompare("") == 0) {
+        document.getElementById("remove").innerHTML = "Fill the username field please";
+        document.getElementById("remove").className = "alert alert alert-danger";
 
-    if (xmlHttp.readyState == 0 || xmlHttp.readyState == 4) {
-      var username = document.getElementById("username"+id).innerHTML;
-
-//      if (username.localeCompare("") == 0) {
-//        document.getElementById("remove").innerHTML = "Fill the username field please";
-//        document.getElementById("remove").className = "alert alert alert-danger";
-//
-//      } else {
+      } else {
 
         xmlHttp.open("POST", "removeuser.php", true);
         xmlHttp.onreadystatechange = removeResponse;
         xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xmlHttp.send("username=" + username);
-       document.getElementById("r"+op).style.display="block";
 
-      //}
+      }
 
     }
   }
 
   function removeResponse() {
-    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+  if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
         var xmlResponse = xmlHttp.responseXML;
         var message = xmlResponse.getElementsByTagName("message")[0].childNodes[0].nodeValue;
-        alert(message);
         
+        if (message.localeCompare("Record deleted successfully") == 0) {
+          document.getElementById("remove").innerHTML = message;
+          document.getElementById("remove").className = "alert alert alert-success";
 
-//        if (message.localeCompare("Record deleted successfully") == 0) {
-//          document.getElementById("remove").innerHTML = message;
-//          document.getElementById("remove").className = "alert alert alert-success";
-//
-//        } else {
-//          document.getElementById("remove").innerHTML = message;
-//          document.getElementById("remove").className = "alert alert alert-danger";
-//        }
+        } else {
+          document.getElementById("remove").innerHTML = message;
+          document.getElementById("remove").className = "alert alert alert-danger";
+        }
     }
   }

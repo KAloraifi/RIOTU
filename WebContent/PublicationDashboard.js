@@ -145,8 +145,8 @@ function removePublicationRequest(op){
         xmlHttp.onreadystatechange = publicationRemoveCallback;
         xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xmlHttp.send("title=" + title);
-        document.getElementById("r"+op).style.display="block";
-        
+       
+        document.getElementById("InvoiceTableBody").deleteRow(op-1);
       //}
 
     }

@@ -34,6 +34,7 @@ include 'include/dbconfig2.php';
 				$number_item=0;
 				if ($result->num_rows > 0) {
 					// output data of each row
+                                    $count=1;
 					while($row = $result->fetch_assoc()) {
 						$number_item+=1;
                         $title=$row["title"];
@@ -62,18 +63,18 @@ include 'include/dbconfig2.php';
                         
 						echo '
 							<td>'.$number_item.'</td>
-							<td>'.$title.'</td>
+							<td id="title'.$count.'">'.$title.'</td>
 							<td>'.$shortDescription.'</td>
 							<td>'.$longDescription.'</td>
 							<td>'.$date.'</td>
 							<td>'.$picture1.' '.$picture2.' '.$picture3.' '.$picture4.'</td>
                             <td> 
                                 <a href="#" class="btn btn-primary btn-mini">Edit</a>
-                                <a href="#" class="btn btn-danger btn-mini">Delete</a>
+                                <a href="#" class="btn btn-danger btn-mini" onclick="removeNewsRequest('.$count.')">Delete</a>
                             </td>
 						   </tr>';
 
-					}
+					$count++;}
 				}
 				echo'</tbody>';
 				echo '</table>';

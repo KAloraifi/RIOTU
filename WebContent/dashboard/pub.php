@@ -46,7 +46,7 @@ include 'include/dbconfig2.php';
 
 						
 						
-                        echo '<tr id="row'.$count.'">';
+                        echo '<tr>';
                         
 						echo '
 							<td>'.$number_item.'</td>
@@ -57,10 +57,9 @@ include 'include/dbconfig2.php';
                             <td width="100px" id="colume'.$count.'"> 
                                 <a href="#" class="btn btn-primary btn-mini" onclick="displayPublication('.$count.')">Edit</a>
                                 <a href="#" class="btn btn-danger btn-mini" onclick="removePublicationRequest('.$count.')">Delete</a>
-                           <a href="#" class="btn btn-danger btn-mini" id="r'.$count.'"  onclick=""  style="display:none;">Save</a>
-                                <a href="#" class="btn btn-primary btn-mini" id="u'.$count.'" onclick="updatePublicationRequest('.$count.')" style="display:none;">Save</a>
                             </td> 
 						   </tr>';
+                               // <a href="#" class="btn btn-primary btn-mini" id="u'.$count.'" onclick="updatePublicationRequest('.$count.')" style="display:none;">Save</a>
 
 					$count++;}
 				}
