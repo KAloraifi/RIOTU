@@ -69,7 +69,7 @@
                                             <div class="span12">
                                                 <a href="userDashboard.php" class="btn-box small span4"><i class="fa fa-users" aria-hidden="true"></i><b>Users</b>
                                                 </a><a href="pubDashboard.php" class="btn-box small span4"><i class="fa fa-book" aria-hidden="true"></i><b>Publications</b>
-                                                </a><a href="dashboard/conf.php" class="btn-box small span4"><i class="fa fa-commenting" aria-hidden="true"></i><b>Conferences</b>
+                                                </a><a href="confDashboard.php" class="btn-box small span4"><i class="fa fa-commenting" aria-hidden="true"></i><b>Conferences</b>
                                                 </a>
                                             </div>
                                         </div>
