@@ -53,19 +53,18 @@
 
 						<li><a href="about.php">ABOUT <i></i></a></li>
 
-						<li class="dropdown "><a href="research.php" class="dropdown-toggle" data-toggle="dropdown">RESEARCH <i class="fa fa-angle-down"></i></a>
+						<li class="dropdown "><a href="research.php" class="dropdown-toggle" data-toggle="dropdown">RESEARCH</a>
 							</li>
 						<li class="dropdown "><a href="people.php" class="dropdown-toggle"
-							data-toggle="dropdown">PEOPLE <i class="fa fa-angle-down"></i></a>
+							data-toggle="dropdown">PEOPLE</a>
 						</li>
 
 						<li class="dropdown "><a href="facilities.php" class="dropdown-toggle"
-							data-toggle="dropdown">FACILITIES <i class="fa fa-angle-down"></i></a>
+							data-toggle="dropdown">FACILITIES</a>
 							</li>
 
 						<li class="dropdown "><a href="publications.php" class="dropdown-toggle"
-							data-toggle="dropdown">PUBLICATIONS <i
-								class="fa fa-angle-down"></i></a>
+							data-toggle="dropdown">PUBLICATIONS</a>
 						</li>
 
 						<li class="dropdown "><a href="events.php" class="dropdown-toggle"

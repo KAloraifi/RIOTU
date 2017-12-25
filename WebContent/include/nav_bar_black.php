@@ -2,7 +2,7 @@
 <nav
 	class="navbar navbar-default navbar-fixed-top navbar-no-background navbar-light-font ignore-paddingtop">
 	<!-- TOP BAR -->
-	<!-- 
+	<!--
 			<div class="nav-topbar clearfix">
 				<div class="container">
 					<div class="left">
@@ -31,7 +31,7 @@
 						</ul>
 					</div>
 				</div>
-			</div> 
+			</div>
 			-->
 	<!-- END TOP BAR -->
 	<div class="container">
@@ -50,37 +50,22 @@
 		</div>
 		-->
 		<ul class="nav navbar-nav secondary-navbar-nav">
-			
+
 		</ul>
 		<div id="main-nav-collapse" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav main-navbar-nav">
 				<li><a href="about.php">ABOUT <i></i>
 				</a></li>
 				<li class="dropdown "><a href="research.php" class="dropdown-toggle"
-					data-toggle="dropdown">RESEARCH <i class="fa fa-angle-down"></i>
-				</a>
-				</li>
+					data-toggle="dropdown">RESEARCH</a></li>
 				<li class="dropdown "><a href="people.php" class="dropdown-toggle"
-					data-toggle="dropdown">PEOPLE <i class="fa fa-angle-down"></i>
-				</a>
-				</li>
+					data-toggle="dropdown">PEOPLE</a></li>
 
 				<li class="dropdown "><a href="facilities.php"
-					class="dropdown-toggle" data-toggle="dropdown">FACILITIES <i
-						class="fa fa-angle-down"></i>
-				</a>
-					<ul class="dropdown-menu" role="menu">
-						<li class="dropdown "><a href="facilities.php"
-							class="dropdown-toggle" data-toggle="dropdown">LAB FACILITIES</a>
-						</li>
-
-					</ul></li>
+					class="dropdown-toggle" data-toggle="dropdown">FACILITIES</a></li>
 
 				<li class="dropdown "><a href="publications.php"
-					class="dropdown-toggle" data-toggle="dropdown">PUBLICATIONS <i
-						class="fa fa-angle-down"></i>
-				</a>
-				</li>
+					class="dropdown-toggle" data-toggle="dropdown">PUBLICATIONS</a></li>
 
 				<li class="dropdown "><a href="events.php" class="dropdown-toggle"
 					data-toggle="dropdown">EVENTS</a></li>
@@ -89,12 +74,11 @@
 					class="dropdown-toggle" data-toggle="dropdown">COLLABORATION </a></li>
 				<li class="dropdown "><a href="http://wiki.coins-lab.org"
 					class="dropdown-toggle" data-toggle="dropdown">WIKI </a></li>
-                
-                 <?php if (isset($_SESSION["username"])) {
 
-										echo '<li><a href="logout.php" class="as-button"><span class="btn btn-primary">Logout</span></a></li>';
+                 <?php if (isset($_SESSION["username"])) {
+										echo '<li><a href="logout.php" class="dropdown-toggle" data-toggle="dropdown">Logout</a></li>';
 									} else {
-    								echo'<li><a href="login.php" class="as-button"><span class="btn btn-primary">Login</span></a></li>';
+    								echo'<li><a href="login.php" class="dropdown-toggle" data-toggle="dropdown">Login</a></li>';
 								}?>
 
 
@@ -102,8 +86,8 @@
 
 			</ul>
 		</div>
-		
-		
+
+
 		<!-- END MAIN NAVIGATION -->
 	</div>
 </nav>
